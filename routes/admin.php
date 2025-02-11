@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\ChildCategoryController;
 use App\Http\Controllers\Backend\CodSettingController;
 use App\Http\Controllers\Backend\CouponController;
 use App\Http\Controllers\Backend\FlashSaleController;
+use App\Http\Controllers\Backend\FooterInfoController;
 use App\Http\Controllers\Backend\HomePageSettingController;
 use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\PaymentSettingController;
@@ -24,6 +25,7 @@ use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Backend\TransactionController;
 use App\Http\Controllers\Backend\VendorController;
+use App\Models\FooterInfo;
 use App\Models\GeneralSetting;
 use Illuminate\Support\Facades\Route;
 
@@ -118,6 +120,9 @@ Route::get('transaction', [TransactionController::class, 'index'])->name('transa
 /** Shipping Rules Routes */
 Route::put('shipping-rule/change-status', [ShippingRuleController::class, 'changeStatus'])->name('shipping-rule.change-status');
 Route::resource('shipping-rule', ShippingRuleController::class);
+
+/** footer routes */
+Route::resource('footer-info', FooterInfoController::class);
 
 /** General Setting Routes */
 Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
