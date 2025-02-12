@@ -1,5 +1,17 @@
 @php
-    $footerInfo = App\Models\FooterInfo::first();
+    $footerInfo = Cache::rememberForever('footer_info', function () {
+        return \App\Models\FooterInfo::first();
+    });
+    $footerSocials = Cache::rememberForever('footer_socials', function () {
+        return \App\Models\FooterSocial::where('status', 1)->get();
+    });
+    $footerGridTwoLinks = Cache::rememberForever('footer_grid_two', function () {
+        return \App\Models\FooterGridTwo::where('status', 1)->get();
+    });
+    $footerTitle = \App\Models\FooterTitle::first();
+    $footerGridThreeLinks = Cache::rememberForever('footer_grid_three', function () {
+        return \App\Models\FooterGridThree::where('status', 1)->get();
+    });
 @endphp
 
 <footer class="footer_2">
@@ -16,39 +28,32 @@
                         {{ $footerInfo->email }}</a>
                     <p><i class="fal fa-map-marker-alt"></i> {{ $footerInfo->address }}</p>
                     <ul class="wsus__footer_social">
-                        <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a class="whatsapp" href="#"><i class="fab fa-whatsapp"></i></a></li>
-                        <li><a class="pinterest" href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                        <li><a class="behance" href="#"><i class="fab fa-behance"></i></a></li>
+                        @foreach ($footerSocials as $link)
+                            <li><a class="behance" href="{{ $link->url }}"><i class="{{ $link->icon }}"></i></a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
             <div class="col-xl-2 col-sm-5 col-md-4 col-lg-2">
                 <div class="wsus__footer_content">
-                    <h5>Company</h5>
+                    <h5>{{ $footerTitle->footer_grid_two_title }}</h5>
                     <ul class="wsus__footer_menu">
-                        <li><a href="#"><i class="fas fa-caret-right"></i> About Us</a></li>
-                        <li><a href="#"><i class="fas fa-caret-right"></i> Team Member</a></li>
-                        <li><a href="#"><i class="fas fa-caret-right"></i> Career</a></li>
-                        <li><a href="#"><i class="fas fa-caret-right"></i> Contact Us</a></li>
-                        <li><a href="#"><i class="fas fa-caret-right"></i> Affilate</a></li>
-                        <li><a href="#"><i class="fas fa-caret-right"></i> Order History</a></li>
-                        <li><a href="#"><i class="fas fa-caret-right"></i> Team Member</a></li>
+                        @foreach ($footerGridTwoLinks as $link)
+                            <li><a href="{{ $link->url }}"><i class="fas fa-caret-right"></i> {{ $link->name }}</a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
             <div class="col-xl-2 col-sm-5 col-md-4 col-lg-2">
                 <div class="wsus__footer_content">
-                    <h5>Company</h5>
+                    <h5>{{ $footerTitle->footer_grid_three_title }}</h5>
                     <ul class="wsus__footer_menu">
-                        <li><a href="#"><i class="fas fa-caret-right"></i> About Us</a></li>
-                        <li><a href="#"><i class="fas fa-caret-right"></i> Team Member</a></li>
-                        <li><a href="#"><i class="fas fa-caret-right"></i> Career</a></li>
-                        <li><a href="#"><i class="fas fa-caret-right"></i> Contact Us</a></li>
-                        <li><a href="#"><i class="fas fa-caret-right"></i> Affilate</a></li>
-                        <li><a href="#"><i class="fas fa-caret-right"></i> Order History</a></li>
-                        <li><a href="#"><i class="fas fa-caret-right"></i> Team Member</a></li>
+                        @foreach ($footerGridThreeLinks as $link)
+                            <li><a href="{{ $link->url }}"><i class="fas fa-caret-right"></i>
+                                    {{ $link->name }}</a></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

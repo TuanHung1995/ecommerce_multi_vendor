@@ -8,7 +8,10 @@ use App\Http\Controllers\Backend\ChildCategoryController;
 use App\Http\Controllers\Backend\CodSettingController;
 use App\Http\Controllers\Backend\CouponController;
 use App\Http\Controllers\Backend\FlashSaleController;
+use App\Http\Controllers\Backend\FooterGridThreeController;
+use App\Http\Controllers\Backend\FooterGridTwoController;
 use App\Http\Controllers\Backend\FooterInfoController;
+use App\Http\Controllers\Backend\FooterSocialController;
 use App\Http\Controllers\Backend\HomePageSettingController;
 use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\PaymentSettingController;
@@ -24,9 +27,7 @@ use App\Http\Controllers\Backend\ShippingRuleController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Backend\TransactionController;
-use App\Http\Controllers\Backend\VendorController;
-use App\Models\FooterInfo;
-use App\Models\GeneralSetting;
+use App\Models\FooterGridTwo;
 use Illuminate\Support\Facades\Route;
 
 /** Admin Routes */
@@ -121,8 +122,18 @@ Route::get('transaction', [TransactionController::class, 'index'])->name('transa
 Route::put('shipping-rule/change-status', [ShippingRuleController::class, 'changeStatus'])->name('shipping-rule.change-status');
 Route::resource('shipping-rule', ShippingRuleController::class);
 
-/** footer routes */
+/** Footer Routes */
 Route::resource('footer-info', FooterInfoController::class);
+Route::put('footer-socials/change-status', [FooterSocialController::class, 'changeStatus'])->name('footer-socials.change-status');
+Route::resource('footer-socials', FooterSocialController::class);
+
+Route::put('footer-grid-two/change-status', [FooterGridTwoController::class, 'changeStatus'])->name('footer-grid-two.change-status');
+Route::put('footer-grid-two/change-title', [FooterGridTwoController::class, 'changeTitle'])->name('footer-grid-two.change-title');
+Route::resource('footer-grid-two', FooterGridTwoController::class);
+
+Route::put('footer-grid-three/change-status', [FooterGridThreeController::class, 'changeStatus'])->name('footer-grid-three.change-status');
+Route::put('footer-grid-three/change-title', [FooterGridThreeController::class, 'changeTitle'])->name('footer-grid-three.change-title');
+Route::resource('footer-grid-three', FooterGridThreeController::class);
 
 /** General Setting Routes */
 Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
