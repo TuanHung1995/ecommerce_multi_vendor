@@ -6,8 +6,8 @@
 
 @section('content')
     <!--============================
-                                                                                                                                                                BREADCRUMB START
-                                                                                                                                                            ==============================-->
+                                                                                                                                                                                BREADCRUMB START
+                                                                                                                                                                            ==============================-->
     <section id="wsus__breadcrumb">
         <div class="wsus_breadcrumb_overlay">
             <div class="container">
@@ -24,27 +24,24 @@
         </div>
     </section>
     <!--============================
-                                                                                                                                                                BREADCRUMB END
-                                                                                                                                                            ==============================-->
+                                                                                                                                                                                BREADCRUMB END
+                                                                                                                                                                            ==============================-->
 
 
     <!--============================
-                                                                                                                                                                PRODUCT PAGE START
-                                                                                                                                                            ==============================-->
+                                                                                                                                                                                PRODUCT PAGE START
+                                                                                                                                                                            ==============================-->
     <section id="wsus__product_page">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="wsus__pro_page_bammer">
-                        <img src="{{ asset('frontend/images/pro_banner_1.jpg') }}" alt="banner" class="img-fluid w-100">
-                        <div class="wsus__pro_page_bammer_text">
-                            <div class="wsus__pro_page_bammer_text_center">
-                                <p>up to <span>70% off</span></p>
-                                <h5>wemen's jeans Collection</h5>
-                                <h3>fashion for wemen's</h3>
-                                <a href="#" class="add_cart">Discover Now</a>
-                            </div>
-                        </div>
+                        @if ($productpage_banner_section->banner_one->status == 1)
+                            <a href="{{ $productpage_banner_section->banner_one->banner_url }}">
+                                <img class="img-gluid"
+                                    src="{{ asset($productpage_banner_section->banner_one->banner_image) }}" alt="">
+                            </a>
+                        @endif
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4">
@@ -180,18 +177,27 @@
                                                             data-bs-target="#product-{{ $product->id }}"><i
                                                                 class="far fa-eye"></i></a>
                                                     </li>
-                                                    <li><a href="#" class="add_to_wishlist" data-id="{{ $product->id }}"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="#" class="add_to_wishlist"
+                                                            data-id="{{ $product->id }}"><i
+                                                                class="far fa-heart"></i></a></li>
                                                 </ul>
                                                 <div class="wsus__product_details">
                                                     <a class="wsus__category"
                                                         href="#">{{ $product->category->name }}</a>
                                                     <p class="wsus__pro_rating">
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                        <span>(133 review)</span>
+                                                        @php
+                                                            $avgRating = $product->reviews()->avg('rating');
+                                                            $fullRating = round($avgRating);
+                                                        @endphp
+
+                                                        @for ($i = 1; $i <= 5; $i++)
+                                                            @if ($i <= $fullRating)
+                                                                <i class="fas fa-star"></i>
+                                                            @else
+                                                                <i class="far fa-star"></i>
+                                                            @endif
+                                                        @endfor
+                                                        <span>({{ count($product->reviews) }} review)</span>
                                                     </p>
                                                     <a class="wsus__pro_name"
                                                         href="{{ route('product-detail', $product->slug) }}">{{ limitText($product->name, 50) }}</a>
@@ -261,12 +267,19 @@
                                                     <a class="wsus__category"
                                                         href="#">{{ @$product->category->name }} </a>
                                                     <p class="wsus__pro_rating">
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                        <span>(17 review)</span>
+                                                        @php
+                                                            $avgRating = $product->reviews()->avg('rating');
+                                                            $fullRating = round($avgRating);
+                                                        @endphp
+
+                                                        @for ($i = 1; $i <= 5; $i++)
+                                                            @if ($i <= $fullRating)
+                                                                <i class="fas fa-star"></i>
+                                                            @else
+                                                                <i class="far fa-star"></i>
+                                                            @endif
+                                                        @endfor
+                                                        <span>({{ count($product->reviews) }} review)</span>
                                                     </p>
                                                     <a class="wsus__pro_name"
                                                         href="{{ route('product-detail', $product->slug) }}">{{ $product->name }}</a>
@@ -343,8 +356,8 @@
         </div>
     </section>
     <!--============================
-                                                                                                                                                                PRODUCT PAGE END
-                                                                                                                                                            ==============================-->
+                                                                                                                                                                                PRODUCT PAGE END
+                                                                                                                                                                            ==============================-->
 
     @foreach ($products as $product)
         <section class="product_popup_modal">
@@ -406,12 +419,19 @@
                                             <h4>{{ $settings->currency_icon }}{{ $product->price }}</h4>
                                         @endif
                                         <p class="review">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt"></i>
-                                            <span>20 review</span>
+                                            @php
+                                                $avgRating = $product->reviews()->avg('rating');
+                                                $fullRating = round($avgRating);
+                                            @endphp
+
+                                            @for ($i = 1; $i <= 5; $i++)
+                                                @if ($i <= $fullRating)
+                                                    <i class="fas fa-star"></i>
+                                                @else
+                                                    <i class="far fa-star"></i>
+                                                @endif
+                                            @endfor
+                                            <span>({{ count($product->reviews) }} review)</span>
                                         </p>
                                         <p class="description">{!! $product->short_description !!}</p>
 
@@ -460,7 +480,9 @@
                                                 <li><button type="submit" class="add_cart" href="#">add to
                                                         cart</button></li>
                                                 <li><a class="buy_now" href="#">buy now</a></li>
-                                                <li><a href="#" class="add_to_wishlist" data-id="{{ $product->id }}"><i class="fal fa-heart"></i></a></li>
+                                                <li><a href="#" class="add_to_wishlist"
+                                                        data-id="{{ $product->id }}"><i class="fal fa-heart"></i></a>
+                                                </li>
                                             </ul>
                                         </form>
                                         <p class="brand_model"><span>brand :</span> {{ $product->brand->name }}</p>

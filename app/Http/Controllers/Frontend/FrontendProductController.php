@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Advertisement;
 use App\Models\Category;
 use App\Models\ChildCategory;
 use App\Models\Product;
 use App\Models\Brand;
+use App\Models\ProductReview;
 use App\Models\SubCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -93,10 +95,15 @@ class FrontendProductController extends Controller
 
         $categories = Category::where('status', 1)->get();
         $brands = Brand::where('status', 1)->get();
+
+        $productpage_banner_section = Advertisement::where('key', 'productpage_banner_section')->first();
+        $productpage_banner_section = json_decode($productpage_banner_section?->value);
+
         return view('frontend.pages.product', compact(
             'products',
             'categories',
-            'brands'
+            'brands',
+            'productpage_banner_section'
         ));
     }
 
@@ -105,10 +112,10 @@ class FrontendProductController extends Controller
     public function showProduct(string $slug)
     {
         $product = Product::with(['vendor', 'category', 'productImageGalleries', 'variants', 'brand'])->where('slug', $slug)->where('status', 1)->first();
-        // $reviews = ProductReview::where('product_id', $product->id)->where('status', 1)->paginate(10);
+        $reviews = ProductReview::where('product_id', $product->id)->where('status', 1)->paginate(10);
         return view('frontend.pages.product-detail', compact(
             'product',
-            // 'reviews'
+            'reviews'
         ));
     }
 
