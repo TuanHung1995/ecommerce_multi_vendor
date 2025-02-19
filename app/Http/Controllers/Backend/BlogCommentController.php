@@ -14,7 +14,7 @@ class BlogCommentController extends Controller
         return $dataTable->render('admin.blog.blog-comment.index');
     }
 
-    public function destory(string $id)
+    public function destroy(string $id)
     {
         $comment = BlogComment::findOrFail($id);
         $comment->delete();

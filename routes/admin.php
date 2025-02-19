@@ -187,7 +187,7 @@ Route::resource('blog-category', BlogCategoryController::class);
 Route::put('blog/status-change', [BlogController::class, 'changeStatus'])->name('blog.status-change');
 Route::resource('blog', BlogController::class);
 Route::get('blog-comments', [BlogCommentController::class, 'index'])->name('blog-comments.index');
-Route::delete('blog-comments/{id}/destroy', [BlogCommentController::class, 'destory'])->name('blog-comments.destroy');
+Route::delete('blog-comments/{id}/destroy', [BlogCommentController::class, 'destroy'])->name('blog-comments.destroy');
 
 /** Footer Routes */
 Route::resource('footer-info', FooterInfoController::class);

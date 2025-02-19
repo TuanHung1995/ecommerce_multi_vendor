@@ -1,9 +1,17 @@
 @extends('frontend.dashboard.layouts.master')
 
+@section('title')
+    {{ $settings->site_name }} || Profile
+@endsection
+
 @section('content')
+    <!--=============================
+            DASHBOARD START
+          ==============================-->
     <section id="wsus__dashboard">
         <div class="container-fluid">
             @include('frontend.dashboard.layouts.sidebar')
+
             <div class="row">
                 <div class="col-xl-9 col-xxl-10 col-lg-9 ms-auto">
                     <div class="dashboard_content mt-2 mt-md-0">
@@ -24,25 +32,28 @@
                                                 <input type="file" name="image">
                                             </div>
                                         </div>
-                                        <div class="col-md-12">
-                                            <div class="wsus__dash_pro_single mt-5">
+                                        <div class="col-md-12 mt-5">
+                                            <div class="wsus__dash_pro_single">
                                                 <i class="fas fa-user-tie"></i>
-                                                <input type="text" name="name" value="{{ Auth::user()->name }}"
-                                                    placeholder="Name">
+                                                <input type="text" placeholder="Name" name="name"
+                                                    value="{{ Auth::user()->name }}">
                                             </div>
                                         </div>
+
                                         <div class="col-md-12">
                                             <div class="wsus__dash_pro_single">
                                                 <i class="fal fa-envelope-open"></i>
-                                                <input type="email" name="email" value="{{ Auth::user()->email }}"
-                                                    placeholder="Email">
+                                                <input type="email" placeholder="Email" name="email"
+                                                    value="{{ Auth::user()->email }}">
                                             </div>
                                         </div>
+
                                     </div>
                                     <div class="col-xl-12">
                                         <button class="common_btn mb-4 mt-2" type="submit">upload</button>
                                     </div>
                                 </form>
+
 
                                 <div class="wsus__dash_pass_change mt-2">
                                     <form action="{{ route('user.profile.update.password') }}" method="POST">
@@ -52,21 +63,21 @@
                                             <div class="col-xl-4 col-md-6">
                                                 <div class="wsus__dash_pro_single">
                                                     <i class="fas fa-unlock-alt"></i>
-                                                    <input type="password" name="current_password"
-                                                        placeholder="Current Password">
+                                                    <input type="password" placeholder="Current Password"
+                                                        name="current_password">
                                                 </div>
                                             </div>
                                             <div class="col-xl-4 col-md-6">
                                                 <div class="wsus__dash_pro_single">
                                                     <i class="fas fa-lock-alt"></i>
-                                                    <input type="password" name="password" placeholder="New Password">
+                                                    <input type="password" placeholder="New Password" name="password">
                                                 </div>
                                             </div>
                                             <div class="col-xl-4">
                                                 <div class="wsus__dash_pro_single">
                                                     <i class="fas fa-lock-alt"></i>
-                                                    <input type="password" name="password_confirmation"
-                                                        placeholder="Confirm Password">
+                                                    <input type="password" placeholder="Confirm Password"
+                                                        name="password_confirmation">
                                                 </div>
                                             </div>
                                             <div class="col-xl-12">
@@ -76,6 +87,7 @@
                                     </form>
                                 </div>
 
+
                             </div>
                         </div>
                     </div>
@@ -83,4 +95,7 @@
             </div>
         </div>
     </section>
+    <!--=============================
+            DASHBOARD START
+          ==============================-->
 @endsection
