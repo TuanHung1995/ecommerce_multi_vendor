@@ -10,6 +10,12 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
+
+    public function blog(Request $request)
+    {
+        $blogs = Blog::with('category')->where('status', 1)->orderBy('id', 'DESC')->paginate(12);
+        return view('frontend.pages.blog', compact('blogs'));
+    }
     
     public function blogDetails(string $slug)
     {
