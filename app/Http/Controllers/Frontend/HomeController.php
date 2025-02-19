@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Advertisement;
+use App\Models\Blog;
 use App\Models\FlashSale;
 use App\Models\FlashSaleItem;
 use App\Models\HomePageSetting;
@@ -39,6 +40,9 @@ class HomeController extends Controller
 
         $homepage_section_banner_four = Advertisement::where('key', 'homepage_section_banner_four')->first();
         $homepage_section_banner_four = json_decode($homepage_section_banner_four?->value);
+        
+        $recentBlogs = Blog::with(['category', 'user'])->where('status', 1)->orderBy('id', 'DESC')->take(8)->get();
+
         return view('frontend.home.home', compact([
             'sliders',
             'flashSaleDate',
@@ -52,7 +56,8 @@ class HomeController extends Controller
             'homepage_section_banner_one',
             'homepage_section_banner_two',
             'homepage_section_banner_three',
-            'homepage_section_banner_four'
+            'homepage_section_banner_four',
+            'recentBlogs'
         ]));
     }
 

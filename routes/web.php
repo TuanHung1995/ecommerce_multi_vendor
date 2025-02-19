@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\FlashSaleController;
 use App\Http\Controllers\Backend\VendorController;
+use App\Http\Controllers\Frontend\BlogController;
 use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\FlashSaleController as FrontendFlashSaleController;
@@ -81,6 +82,8 @@ Route::get('wishlist/add-product', [WishlistController::class, 'addToWishlist'])
 
 /** Product Track Route */
 Route::get('product-traking', [ProductTrackController::class, 'index'])->name('product-traking.index');
+
+Route::get('blog-details/{slug}', [BlogController::class, 'blogDetails'])->name('blog-details');
 
 /** About Page */
 Route::get('about', [PageController::class, 'about'])->name('about');
