@@ -122,8 +122,9 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
     Route::get('vendor-request', [UserVendorResquestController::class, 'index'])->name('vendor-request.index');
     Route::post('vendor-request', [UserVendorResquestController::class, 'create'])->name('vendor-request.create');
 
-
-
+    /** Blog Routes */
+    Route::post('blog-comment', [BlogController::class, 'comment'])->name('blog-comment');
+    
     /** Checkout Routes */
     Route::get('checkout', [CheckoutController::class, 'index'])->name('checkout');
     Route::post('checkout/address-create', [CheckOutController::class, 'createAddress'])->name('checkout.address.create');
