@@ -84,6 +84,7 @@ Route::get('wishlist/add-product', [WishlistController::class, 'addToWishlist'])
 Route::get('product-traking', [ProductTrackController::class, 'index'])->name('product-traking.index');
 
 Route::get('blog-details/{slug}', [BlogController::class, 'blogDetails'])->name('blog-details');
+Route::get('blog', [BlogController::class, 'blog'])->name('blog');
 
 /** About Page */
 Route::get('about', [PageController::class, 'about'])->name('about');

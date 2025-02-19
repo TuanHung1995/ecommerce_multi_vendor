@@ -13,7 +13,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h4>blog dtails</h4>
+                        <h4>blog details</h4>
                         <ul>
                             <li><a href="#">blog</a></li>
                             <li><a href="#">blog details</a></li>
