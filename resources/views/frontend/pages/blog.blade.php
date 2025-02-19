@@ -37,7 +37,7 @@
                 <h5>Search: {{ request()->search }}</h5>
                 <hr>
             @elseif (request()->has('category'))
-                <h5>Search: {{ request()->category }}</h5>
+                <h5>Category: {{ request()->category }}</h5>
                 <hr>
             @endif
             <div class="row">
