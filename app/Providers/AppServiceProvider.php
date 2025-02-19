@@ -35,8 +35,8 @@ class AppServiceProvider extends ServiceProvider
 
 
         /** Share variable at all view */
-        View::composer('*', function ($view) use ($generalSetting, $logoSetting, $mailSetting) {
-            $view->with(['generalSetting' => $generalSetting, 'logoSetting' => $logoSetting, 'mailSetting' => $mailSetting]);
+        View::composer('*', function ($view) use ($generalSetting, $logoSetting) {
+            $view->with(['settings' => $generalSetting, 'logoSetting' => $logoSetting]);
         });
     }
 }
