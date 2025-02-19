@@ -162,6 +162,8 @@
 
                     <li class="{{ setActive(['admin.blog-category.*']) }}"><a class="nav-link"
                             href="{{ route('admin.blog-category.index') }}">Categories</a></li>
+                    <li class="{{ setActive(['admin.blog.*']) }}"><a class="nav-link"
+                            href="{{ route('admin.blog.index') }}">Blogs</a></li>
                 </ul>
             </li>
 
@@ -196,11 +198,11 @@
 
             <li
                 class="dropdown {{ setActive([
-                     'admin.vendor-requests.*', 
-                     'admin.customer.index', 
-                     'admin.vendor-list.index', 
-                     'admin.admin-list.index', 
-                     'admin.manage-user.index'
+                    'admin.vendor-requests.*',
+                    'admin.customer.index',
+                    'admin.vendor-list.index',
+                    'admin.admin-list.index',
+                    'admin.manage-user.index',
                 ]) }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-users"></i>
                     <span>Users</span></a>
