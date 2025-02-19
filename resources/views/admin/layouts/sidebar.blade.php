@@ -164,6 +164,9 @@
                             href="{{ route('admin.blog-category.index') }}">Categories</a></li>
                     <li class="{{ setActive(['admin.blog.*']) }}"><a class="nav-link"
                             href="{{ route('admin.blog.index') }}">Blogs</a></li>
+                    <li class="{{ setActive(['admin.blog-comments.index']) }}"><a class="nav-link"
+                            href="{{ route('admin.blog-comments.index') }}">Blog Comments</a></li>
+
                 </ul>
             </li>
 
