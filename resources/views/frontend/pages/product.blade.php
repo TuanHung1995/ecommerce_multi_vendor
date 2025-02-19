@@ -6,10 +6,10 @@
 
 @section('content')
     <!--============================
-                                                                                                                                                                                BREADCRUMB START
-                                                                                                                                                                            ==============================-->
-    <section id="wsus__breadcrumb">
-        <div class="wsus_breadcrumb_overlay">
+                                                                                                                                                                                    BREADCRUMB START
+                                                                                                                                                                                ==============================-->
+    <section id="ecom__breadcrumb">
+        <div class="ecom_breadcrumb_overlay">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -24,18 +24,18 @@
         </div>
     </section>
     <!--============================
-                                                                                                                                                                                BREADCRUMB END
-                                                                                                                                                                            ==============================-->
+                                                                                                                                                                                    BREADCRUMB END
+                                                                                                                                                                                ==============================-->
 
 
     <!--============================
-                                                                                                                                                                                PRODUCT PAGE START
-                                                                                                                                                                            ==============================-->
-    <section id="wsus__product_page">
+                                                                                                                                                                                    PRODUCT PAGE START
+                                                                                                                                                                                ==============================-->
+    <section id="ecom__product_page">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
-                    <div class="wsus__pro_page_bammer">
+                    <div class="ecom__pro_page_bammer">
                         @if ($productpage_banner_section->banner_one->status == 1)
                             <a href="{{ $productpage_banner_section->banner_one->banner_url }}">
                                 <img class="img-gluid"
@@ -45,14 +45,14 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-4">
-                    <div class="wsus__sidebar_filter ">
+                    <div class="ecom__sidebar_filter ">
                         <p>filter</p>
-                        <span class="wsus__filter_icon">
+                        <span class="ecom__filter_icon">
                             <i class="far fa-minus" id="minus"></i>
                             <i class="far fa-plus" id="plus"></i>
                         </span>
                     </div>
-                    <div class="wsus__product_sidebar" id="sticky_sidebar">
+                    <div class="ecom__product_sidebar" id="sticky_sidebar">
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
@@ -127,8 +127,8 @@
                 <div class="col-xl-9 col-lg-8">
                     <div class="row">
                         <div class="col-xl-12 d-none d-md-block mt-md-4 mt-lg-0">
-                            <div class="wsus__product_topbar">
-                                <div class="wsus__product_topbar_left">
+                            <div class="ecom__product_topbar">
+                                <div class="ecom__product_topbar_left">
                                     <div class="nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                                         <button
                                             class="nav-link {{ session()->has('product_list_style') && session()->get('product_list_style') == 'grid' ? 'active' : '' }} {{ !session()->has('product_list_style') ? 'active' : '' }} list-view"
@@ -155,13 +155,13 @@
 
                                     @foreach ($products as $product)
                                         <div class="col-xl-4 col-sm-6">
-                                            <div class="wsus__product_item">
-                                                <span class="wsus__new">{{ productType($product->product_type) }}</span>
+                                            <div class="ecom__product_item">
+                                                <span class="ecom__new">{{ productType($product->product_type) }}</span>
                                                 @if (checkDiscount($product))
                                                     <span
-                                                        class="wsus__minus">-{{ calculateDiscountPercent($product->price, $product->offer_price) }}%</span>
+                                                        class="ecom__minus">-{{ calculateDiscountPercent($product->price, $product->offer_price) }}%</span>
                                                 @endif
-                                                <a class="wsus__pro_link"
+                                                <a class="ecom__pro_link"
                                                     href="{{ route('product-detail', $product->slug) }}">
                                                     <img src="{{ asset($product->thumb_image) }}" alt="product"
                                                         class="img-fluid w-100 img_1" />
@@ -172,7 +172,7 @@
                                                     "
                                                         alt="product" class="img-fluid w-100 img_2" />
                                                 </a>
-                                                <ul class="wsus__single_pro_icon">
+                                                <ul class="ecom__single_pro_icon">
                                                     <li><a href="#" data-bs-toggle="modal"
                                                             data-bs-target="#product-{{ $product->id }}"><i
                                                                 class="far fa-eye"></i></a>
@@ -181,10 +181,10 @@
                                                             data-id="{{ $product->id }}"><i
                                                                 class="far fa-heart"></i></a></li>
                                                 </ul>
-                                                <div class="wsus__product_details">
-                                                    <a class="wsus__category"
+                                                <div class="ecom__product_details">
+                                                    <a class="ecom__category"
                                                         href="#">{{ $product->category->name }}</a>
-                                                    <p class="wsus__pro_rating">
+                                                    <p class="ecom__pro_rating">
                                                         @php
                                                             $avgRating = $product->reviews()->avg('rating');
                                                             $fullRating = round($avgRating);
@@ -199,15 +199,15 @@
                                                         @endfor
                                                         <span>({{ count($product->reviews) }} review)</span>
                                                     </p>
-                                                    <a class="wsus__pro_name"
+                                                    <a class="ecom__pro_name"
                                                         href="{{ route('product-detail', $product->slug) }}">{{ limitText($product->name, 50) }}</a>
                                                     @if (checkDiscount($product))
-                                                        <p class="wsus__price">
+                                                        <p class="ecom__price">
                                                             {{ $settings->currency_icon }}{{ $product->offer_price }}
                                                             <del>{{ $settings->currency_icon }}{{ $product->price }}</del>
                                                         </p>
                                                     @else
-                                                        <p class="wsus__price">
+                                                        <p class="ecom__price">
                                                             {{ $settings->currency_icon }}{{ $product->price }}<del></del>
                                                         </p>
                                                     @endif
@@ -245,13 +245,13 @@
                                 <div class="row">
                                     @foreach ($products as $product)
                                         <div class="col-xl-12">
-                                            <div class="wsus__product_item wsus__list_view">
-                                                <span class="wsus__new">{{ productType($product->product_type) }}</span>
+                                            <div class="ecom__product_item ecom__list_view">
+                                                <span class="ecom__new">{{ productType($product->product_type) }}</span>
                                                 @if (checkDiscount($product))
                                                     <span
-                                                        class="wsus__minus">-{{ calculateDiscountPercent($product->price, $product->offer_price) }}%</span>
+                                                        class="ecom__minus">-{{ calculateDiscountPercent($product->price, $product->offer_price) }}%</span>
                                                 @endif
-                                                <a class="wsus__pro_link"
+                                                <a class="ecom__pro_link"
                                                     href="{{ route('product-detail', $product->slug) }}">
                                                     <img src="{{ asset($product->thumb_image) }}" alt="product"
                                                         class="img-fluid w-100 img_1" />
@@ -263,10 +263,10 @@
                                                         "
                                                         alt="product" class="img-fluid w-100 img_2" />
                                                 </a>
-                                                <div class="wsus__product_details">
-                                                    <a class="wsus__category"
+                                                <div class="ecom__product_details">
+                                                    <a class="ecom__category"
                                                         href="#">{{ @$product->category->name }} </a>
-                                                    <p class="wsus__pro_rating">
+                                                    <p class="ecom__pro_rating">
                                                         @php
                                                             $avgRating = $product->reviews()->avg('rating');
                                                             $fullRating = round($avgRating);
@@ -281,20 +281,20 @@
                                                         @endfor
                                                         <span>({{ count($product->reviews) }} review)</span>
                                                     </p>
-                                                    <a class="wsus__pro_name"
+                                                    <a class="ecom__pro_name"
                                                         href="{{ route('product-detail', $product->slug) }}">{{ $product->name }}</a>
                                                     @if (checkDiscount($product))
-                                                        <p class="wsus__price">
+                                                        <p class="ecom__price">
                                                             {{ $settings->currency_icon }}{{ $product->offer_price }}
                                                             <del>{{ $settings->currency_icon }}{{ $product->price }}</del>
                                                         </p>
                                                     @else
-                                                        <p class="wsus__price">
+                                                        <p class="ecom__price">
                                                             {{ $settings->currency_icon }}{{ $product->price }}<del></del>
                                                         </p>
                                                     @endif
                                                     <p class="list_description">{!! $product->short_description !!}</p>
-                                                    <ul class="wsus__single_pro_icon">
+                                                    <ul class="ecom__single_pro_icon">
                                                         <li>
                                                             <form class="shopping-cart-form">
 
@@ -356,8 +356,8 @@
         </div>
     </section>
     <!--============================
-                                                                                                                                                                                PRODUCT PAGE END
-                                                                                                                                                                            ==============================-->
+                                                                                                                                                                                    PRODUCT PAGE END
+                                                                                                                                                                                ==============================-->
 
     @foreach ($products as $product)
         <section class="product_popup_modal">
@@ -369,9 +369,9 @@
                                     class="far fa-times"></i></button>
                             <div class="row">
                                 <div class="col-xl-6 col-12 col-sm-10 col-md-8 col-lg-6 m-auto display">
-                                    <div class="wsus__quick_view_img">
+                                    <div class="ecom__quick_view_img">
                                         @if ($product->video_link)
-                                            <a class="venobox wsus__pro_det_video" data-autoplay="true"
+                                            <a class="venobox ecom__pro_det_video" data-autoplay="true"
                                                 data-vbtype="video" href="{{ $product->video_link }}">
                                                 <i class="fas fa-play"></i>
                                             </a>
@@ -407,9 +407,9 @@
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-12 col-sm-12 col-md-12 col-lg-6">
-                                    <div class="wsus__pro_details_text">
+                                    <div class="ecom__pro_details_text">
                                         <a class="title" href="#">{{ $product->name }}</a>
-                                        <p class="wsus__stock_area"><span class="in_stock">in stock</span> (167 item)
+                                        <p class="ecom__stock_area"><span class="in_stock">in stock</span> (167 item)
                                         </p>
                                         @if (checkDiscount($product))
                                             <h4>{{ $settings->currency_icon }}{{ $product->offer_price }}
@@ -436,7 +436,7 @@
                                         <p class="description">{!! $product->short_description !!}</p>
 
                                         <form class="shopping-cart-form">
-                                            <div class="wsus__selectbox">
+                                            <div class="ecom__selectbox">
                                                 <div class="row">
 
                                                     <input type="hidden" name="product_id" value="{{ $product->id }}">
@@ -467,7 +467,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="wsus__quentity">
+                                            <div class="ecom__quentity">
                                                 <h5>quentity :</h5>
                                                 <div class="select_number">
                                                     <input class="number_area" name="qty" type="text"
@@ -476,7 +476,7 @@
 
                                             </div>
 
-                                            <ul class="wsus__button_area">
+                                            <ul class="ecom__button_area">
                                                 <li><button type="submit" class="add_cart" href="#">add to
                                                         cart</button></li>
                                                 <li><a class="buy_now" href="#">buy now</a></li>

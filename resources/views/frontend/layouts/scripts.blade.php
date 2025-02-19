@@ -55,12 +55,12 @@
                         let product = data[item];
                         html += `
                       <li id="mini_cart_${product.rowId}">
-                          <div class="wsus__cart_img">
+                          <div class="ecom__cart_img">
                               <a href="{{ url('product-detail') }}/${product.options.slug}"><img src="{{ asset('/') }}${product.options.image}" alt="product" class="img-fluid w-100"></a>
                               <a class="wsis__del_icon remove_sidebar_product" data-id="${product.rowId}" href="#"><i class="fas fa-minus-circle"></i></a>
                           </div>
-                          <div class="wsus__cart_text">
-                              <a class="wsus__cart_title" href="{{ url('product-detail') }}/${product.options.slug}">${data[item].name}</a>
+                          <div class="ecom__cart_text">
+                              <a class="ecom__cart_title" href="{{ url('product-detail') }}/${product.options.slug}">${data[item].name}</a>
                               <p>{{ $settings->currency_icon }}${product.price}</p>
 
                               <small>Variants total:

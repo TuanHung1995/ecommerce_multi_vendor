@@ -6,10 +6,10 @@
 
 @section('content')
     <!--============================
-            BREADCRUMB START
-        ==============================-->
-    <section id="wsus__breadcrumb">
-        <div class="wsus_breadcrumb_overlay">
+                BREADCRUMB START
+            ==============================-->
+    <section id="ecom__breadcrumb">
+        <div class="ecom_breadcrumb_overlay">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -24,16 +24,16 @@
         </div>
     </section>
     <!--============================
-            BREADCRUMB END
-        ==============================-->
+                BREADCRUMB END
+            ==============================-->
 
 
     <!--============================
-            PAYMENT PAGE START
-        ==============================-->
-    <section id="wsus__cart_view">
+                PAYMENT PAGE START
+            ==============================-->
+    <section id="ecom__cart_view">
         <div class="container">
-            <div class="wsus__pay_info_area">
+            <div class="ecom__pay_info_area">
                 <div class="row">
                     <h1>Paymet success!</h1>
                 </div>
@@ -41,6 +41,6 @@
         </div>
     </section>
     <!--============================
-            PAYMENT PAGE END
-        ==============================-->
+                PAYMENT PAGE END
+            ==============================-->
 @endsection

@@ -6,10 +6,10 @@
 
 @section('content')
     <!--============================
-            BREADCRUMB START
-        ==============================-->
-    <section id="wsus__breadcrumb">
-        <div class="wsus_breadcrumb_overlay">
+                BREADCRUMB START
+            ==============================-->
+    <section id="ecom__breadcrumb">
+        <div class="ecom_breadcrumb_overlay">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -24,24 +24,24 @@
         </div>
     </section>
     <!--============================
-            BREADCRUMB END
-        ==============================-->
+                BREADCRUMB END
+            ==============================-->
 
 
     <!--============================
-          VENDORS START
-        ==============================-->
-    <section id="wsus__product_page" class="wsus__vendors">
+              VENDORS START
+            ==============================-->
+    <section id="ecom__product_page" class="ecom__vendors">
         <div class="container">
             <div class="row">
                 <div class="">
                     <div class="row">
                         @foreach ($vendors as $vendor)
                             <div class="col-xl-6 col-md-6">
-                                <div class="wsus__vendor_single">
+                                <div class="ecom__vendor_single">
                                     <img src="{{ asset($vendor->banner) }}" alt="vendor" class="img-fluid w-100">
-                                    <div class="wsus__vendor_text">
-                                        <div class="wsus__vendor_text_center">
+                                    <div class="ecom__vendor_text">
+                                        <div class="ecom__vendor_text_center">
                                             <h4>{{ $vendor->shop_name }}</h4>
 
                                             <a href="javascript:;"><i class="far fa-phone-alt"></i>
@@ -71,6 +71,6 @@
         </div>
     </section>
     <!--============================
-           VENDORS END
-        ==============================-->
+               VENDORS END
+            ==============================-->
 @endsection

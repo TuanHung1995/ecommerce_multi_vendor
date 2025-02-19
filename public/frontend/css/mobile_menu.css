@@ -14,7 +14,7 @@ a {
   display: inline-block;
 }
 
-.wsus__mobile_menu_icon {
+.ecom__mobile_menu_icon {
   width: 30px;
   height: 30px;
   background: #2a9cf5;
@@ -34,12 +34,12 @@ a {
   -o-transition: all linear 0.3s ease;
 }
 
-.wsus__mobile_menu_icon:hover {
+.ecom__mobile_menu_icon:hover {
   color: #fff;
   background: #0363ae;
 }
 
-.wsus__mobile_menu_close {
+.ecom__mobile_menu_close {
   width: 30px;
   height: 30px;
   text-align: center;
@@ -61,11 +61,11 @@ a {
   border-radius: 3px;
 }
 
-.wsus__mobile_menu_close:hover {
+.ecom__mobile_menu_close:hover {
   background: #2a9cf5;
 }
 
-#wsus__mobile_menu {
+#ecom__mobile_menu {
   width: 300px;
   background: #0b2c3d;
   height: 100vh;
@@ -133,12 +133,12 @@ a {
   color: #007aff;
 }
 
-.wsus__mobile_menu_header_icon {
+.ecom__mobile_menu_header_icon {
 	margin: 15px 10px 10px 10px;
 	align-items: center;
 }
 
-.wsus__mobile_menu_header_icon li a span {
+.ecom__mobile_menu_header_icon li a span {
 	position: absolute;
 	width: 20px;
 	height: 21px;
@@ -153,7 +153,7 @@ a {
 	color: #5897fb;
 }
 
-.wsus__mobile_menu_header_icon li a {
+.ecom__mobile_menu_header_icon li a {
   width: 31px;
   height: 31px;
   background: #2a9cf5;
@@ -172,20 +172,20 @@ a {
   display: block;
 }
 
-.wsus__mobile_menu_header_icon li a:hover {
+.ecom__mobile_menu_header_icon li a:hover {
   background: transparent;
   color: #2a9cf5;
   border-color: #2a9cf5;
 }
 
-#wsus__mobile_menu form {
+#ecom__mobile_menu form {
   position: relative;
   margin: 20px 10px 30px 10px;
   border-radius: 5px;
   overflow: hidden;
 }
 
-#wsus__mobile_menu form input {
+#ecom__mobile_menu form input {
   width: 100%;
   padding: 10.5px;
   background: none;
@@ -196,7 +196,7 @@ a {
   border-radius: 5px;
 }
 
-#wsus__mobile_menu form button {
+#ecom__mobile_menu form button {
   border: none;
   position: absolute;
   top: 0;
@@ -218,19 +218,19 @@ a {
   -o-transition: all linear 0.3s ease;
 }
 
-#wsus__mobile_menu form button:hover {
+#ecom__mobile_menu form button:hover {
   color: #fdfdfd2e;
 }
 
-#wsus__mobile_menu #pills-tab {
+#ecom__mobile_menu #pills-tab {
   margin: 0 !important;
 }
 
-#wsus__mobile_menu #pills-tab li {
+#ecom__mobile_menu #pills-tab li {
   width: 50%;
 }
 
-#wsus__mobile_menu #pills-tab li button {
+#ecom__mobile_menu #pills-tab li button {
 	background: none;
 	color: #e1e1e1;
 	border: none;
@@ -243,17 +243,17 @@ a {
 	outline: none;
 }
 
-#wsus__mobile_menu .nav-pills .nav-link.active,
-#wsus__mobile_menu #pills-tab li button:hover {
+#ecom__mobile_menu .nav-pills .nav-link.active,
+#ecom__mobile_menu #pills-tab li button:hover {
   color: #2a9cf5 !important;
   border-color: #2a9cf5 !important;
 }
 
-.wsus_mobile_menu_category {
+.ecom_mobile_menu_category {
   margin: 15px 0px;
 }
 
-.wsus_mobile_menu_category li a {
+.ecom_mobile_menu_category li a {
   color: #e1e1e1;
   font-size: 14px;
   font-weight: 400;
@@ -269,30 +269,30 @@ a {
   -o-transition: all linear 0.3s ease;
 }
 
-.wsus_mobile_menu_category li:last-child a {
+.ecom_mobile_menu_category li:last-child a {
   border: none;
   padding-bottom: 0;
 }
 
-.wsus_mobile_menu_category li a i {
+.ecom_mobile_menu_category li a i {
   width: 25px;
 }
 
-.wsus_mobile_menu_category li:hover > a,
-.wsus__mobile_menu_main_menu li:hover > a,
-.wsus__mobile_menu_main_menu .accordion-button:hover {
+.ecom_mobile_menu_category li:hover > a,
+.ecom__mobile_menu_main_menu li:hover > a,
+.ecom__mobile_menu_main_menu .accordion-button:hover {
   color: #2a9cf5 !important;
 }
 
-.wsus__mobile_menu_main_menu {
+.ecom__mobile_menu_main_menu {
   margin: 15px 0px;
 }
 
-.wsus__mobile_menu_main_menu li {
+.ecom__mobile_menu_main_menu li {
   position: relative;
 }
 
-.wsus__mobile_menu_main_menu li a {
+.ecom__mobile_menu_main_menu li a {
   color: #e1e1e1;
   font-size: 14px;
   font-weight: 400;
@@ -309,11 +309,11 @@ a {
   align-items: center;
 }
 
-.wsus__mobile_menu_main_menu li:last-child a {
+.ecom__mobile_menu_main_menu li:last-child a {
   border-bottom: none;
 }
 
-.wsus__mobile_menu_main_menu .accordion-button {
+.ecom__mobile_menu_main_menu .accordion-button {
   text-transform: capitalize;
   font-size: 14px;
   padding: 12px 20px;
@@ -327,7 +327,7 @@ a {
   color: #e1e1e1 !important;
 }
 
-.wsus__mobile_menu_main_menu .accordion-button a {
+.ecom__mobile_menu_main_menu .accordion-button a {
   transition: all linear 0.3s;
   -webkit-transition: all linear 0.3s ease;
   -moz-transition: all linear 0.3s ease;
@@ -335,11 +335,11 @@ a {
   -o-transition: all linear 0.3s ease;
 }
 
-.wsus__mobile_menu_main_menu .accordion-button:focus {
+.ecom__mobile_menu_main_menu .accordion-button:focus {
   box-shadow: none;
 }
 
-.wsus__mobile_menu_main_menu .accordion-button::after {
+.ecom__mobile_menu_main_menu .accordion-button::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-style: normal;
@@ -357,30 +357,30 @@ a {
   background: transparent;
 }
 
-.wsus__mobile_menu_main_menu .accordion-button:not(.collapsed)::after {
+.ecom__mobile_menu_main_menu .accordion-button:not(.collapsed)::after {
   background: none;
 }
 
-.wsus__mobile_menu_main_menu .accordion-body {
+.ecom__mobile_menu_main_menu .accordion-body {
   padding: 0;
   background: #0f3a50;
 }
 
-.wsus__mobile_menu_main_menu .accordion-body ul li a {
+.ecom__mobile_menu_main_menu .accordion-body ul li a {
   padding: 12px 5px;
 }
 
-.wsus__mobile_menu_main_menu .accordion-button.collapsed {
+.ecom__mobile_menu_main_menu .accordion-button.collapsed {
   border: none !important;
   border-bottom: 1px solid #fdfdfd2e !important;
 }
 
-.wsus__mobile_menu_main_menu .accordion-button:not(.collapsed) {
+.ecom__mobile_menu_main_menu .accordion-button:not(.collapsed) {
   border-top: none;
 }
 
 /* V V I CSS */
-#wsus__mobile_menu.show_m_menu {
+#ecom__mobile_menu.show_m_menu {
   transform: scale(1);
   -webkit-transform: scale(1);
   -moz-transform: scale(1);

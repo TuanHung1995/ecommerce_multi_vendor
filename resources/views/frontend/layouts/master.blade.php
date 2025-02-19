@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/jquery.classycountdown.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/venobox.min.css') }}">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-        {{-- <link rel="stylesheet" href="{{ asset('backend/assets/modules/select2/dist/css/select2.min.css') }}"> --}}
+    {{-- <link rel="stylesheet" href="{{ asset('backend/assets/modules/select2/dist/css/select2.min.css') }}"> --}}
 
 
 
@@ -65,9 +65,9 @@
     <!--==========================
         POP UP START
     ===========================-->
-    <!-- <section id="wsus__pop_up">
-        <div class="wsus__pop_up_center">
-            <div class="wsus__pop_up_text">
+    <!-- <section id="ecom__pop_up">
+        <div class="ecom__pop_up_center">
+            <div class="ecom__pop_up_text">
                 <span id="cross"><i class="fas fa-times"></i></span>
                 <h5>get up to <span>75% off</span></h5>
                 <h2>Sign up to E-SHOP</h2>
@@ -75,7 +75,7 @@
                 <form>
                     <input type="email" placeholder="Your Email" class="news_input">
                     <button type="submit" class="common_btn">go</button>
-                    <div class="wsus__pop_up_check_box">
+                    <div class="ecom__pop_up_check_box">
                     </div>
                 </form>
                 <div class="form-check">
@@ -110,7 +110,7 @@
     <!--============================
         MAIN CONTENT START
     ==============================-->
-    <div class="wsus__scroll_btn">
+    <div class="ecom__scroll_btn">
         <i class="fas fa-chevron-up"></i>
     </div>
     <!--============================

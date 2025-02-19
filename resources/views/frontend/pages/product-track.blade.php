@@ -6,10 +6,10 @@
 
 @section('content')
     <!--============================
-                    BREADCRUMB START
-                ==============================-->
-    <section id="wsus__breadcrumb">
-        <div class="wsus_breadcrumb_overlay">
+                        BREADCRUMB START
+                    ==============================-->
+    <section id="ecom__breadcrumb">
+        <div class="ecom_breadcrumb_overlay">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -24,16 +24,16 @@
         </div>
     </section>
     <!--============================
-                    BREADCRUMB END
-                ==============================-->
+                        BREADCRUMB END
+                    ==============================-->
 
 
     <!--============================
-                    TRACKING ORDER START
-                ==============================-->
-    <section id="wsus__login_register">
+                        TRACKING ORDER START
+                    ==============================-->
+    <section id="ecom__login_register">
         <div class="container">
-            <div class="wsus__track_area">
+            <div class="ecom__track_area">
                 <div class="row">
                     <div class="col-xl-5 col-md-10 col-lg-8 m-auto">
 
@@ -41,7 +41,7 @@
 
                             <h4 class="text-center">order tracking</h4>
                             <p class="text-center">tracking your order status</p>
-                            <div class="wsus__track_input">
+                            <div class="ecom__track_input">
                                 <label class="d-block mb-2">invoice id*</label>
                                 <input type="text" placeholder="H25-21578455" name="tracker"
                                     value="{{ @$order->invocie_id }}">
@@ -53,29 +53,29 @@
                 @if (isset($order))
                     <div class="row">
                         <div class="col-xl-12">
-                            <div class="wsus__track_header">
-                                <div class="wsus__track_header_text">
+                            <div class="ecom__track_header">
+                                <div class="ecom__track_header_text">
                                     <div class="row">
                                         <div class="col-xl-3 col-sm-6 col-lg-3">
-                                            <div class="wsus__track_header_single">
+                                            <div class="ecom__track_header_single">
                                                 <h5>Order Date </h5>
                                                 <p>{{ date('d M Y', strtotime(@$order->created_at)) }}</p>
                                             </div>
                                         </div>
                                         <div class="col-xl-3 col-sm-6 col-lg-3">
-                                            <div class="wsus__track_header_single">
+                                            <div class="ecom__track_header_single">
                                                 <h5>shopping by:</h5>
                                                 <p>{{ @$order->user->name }}</p>
                                             </div>
                                         </div>
                                         <div class="col-xl-3 col-sm-6 col-lg-3">
-                                            <div class="wsus__track_header_single">
+                                            <div class="ecom__track_header_single">
                                                 <h5>status:</h5>
                                                 <p>{{ @$order->order_status }}</p>
                                             </div>
                                         </div>
                                         <div class="col-xl-3 col-sm-6 col-lg-3">
-                                            <div class="wsus__track_header_single border_none">
+                                            <div class="ecom__track_header_single border_none">
                                                 <h5>tracking:</h5>
                                                 <p>{{ @$order->invocie_id }}</p>
                                             </div>
@@ -125,6 +125,6 @@
         </div>
     </section>
     <!--============================
-                    TRACKING ORDER END
-                ==============================-->
+                        TRACKING ORDER END
+                    ==============================-->
 @endsection
