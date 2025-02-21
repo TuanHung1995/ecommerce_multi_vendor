@@ -35,30 +35,7 @@
         <div class="container">
             <div class="ecom__offer_details_area">
                 <div class="row">
-                    <div class="col-xl-6 col-md-6">
-                        <div class="ecom__offer_details_banner">
-                            <img src="{{ asset('frontend/images/offer_banner_2.png') }}" alt="offrt img"
-                                class="img-fluid w-100">
-                            <div class="ecom__offer_details_banner_text">
-                                <p>apple watch</p>
-                                <span>up 50% 0ff</span>
-                                <p>for all poduct</p>
-                                <p><b>today only</b></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-md-6">
-                        <div class="ecom__offer_details_banner">
-                            <img src="{{ asset('frontend/images/offer_banner_3.png') }}" alt="offrt img"
-                                class="img-fluid w-100">
-                            <div class="ecom__offer_details_banner_text">
-                                <p>xiaomi power bank</p>
-                                <span>up 37% 0ff</span>
-                                <p>for all poduct</p>
-                                <p><b>today only</b></p>
-                            </div>
-                        </div>
-                    </div>
+                   
                 </div>
 
                 <div class="row">
