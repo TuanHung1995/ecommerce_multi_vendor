@@ -8,7 +8,7 @@
     <!--=============================
                 DASHBOARD START
               ==============================-->
-    <section id="wsus__dashboard">
+    <section id="ecom__dashboard">
         <div class="container-fluid">
             @include('vendor.layouts.sidebar')
 
@@ -16,15 +16,15 @@
                 <div class="col-xl-9 col-xxl-10 col-lg-9 ms-auto">
                     <div class="dashboard_content mt-2 mt-md-0">
                         <h3><i class="far fa-user"></i> Create Withdraw Request</h3>
-                        <div class="wsus__dashboard_profile">
+                        <div class="ecom__dashboard_profile">
                             <div class="row">
-                                <div class="wsus__dash_pro_area col-md-6">
+                                <div class="ecom__dash_pro_area col-md-6">
 
                                     <form action="{{ route('vendor.withdraw.store') }}" method="POST"
                                         enctype="multipart/form-data">
                                         @csrf
 
-                                        <div class="form-group wsus__input">
+                                        <div class="form-group ecom__input">
                                             <label>Method</label>
                                             <select name="method" id="method" class="form-control">
                                                 <option value="">Select</option>
@@ -34,12 +34,12 @@
                                             </select>
                                         </div>
 
-                                        <div class="form-group wsus__input">
+                                        <div class="form-group ecom__input">
                                             <label>Withdraw Amount</label>
                                             <input type="text" class="form-control" name="amount">
                                         </div>
 
-                                        <div class="form-group wsus__input">
+                                        <div class="form-group ecom__input">
                                             <label>Account Information</label>
                                             <textarea name="account_info" class="form-control"></textarea>
                                         </div>
@@ -51,7 +51,7 @@
 
                                 </div>
 
-                                <div class="wsus__dash_pro_area col-md-6 account_info_area ml-2">
+                                <div class="ecom__dash_pro_area col-md-6 account_info_area ml-2">
 
 
                                 </div>
