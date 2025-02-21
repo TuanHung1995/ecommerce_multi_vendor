@@ -23,7 +23,7 @@
                                     <a class="ecom__dashboard_item red" href="{{ route('vendor.orders.index') }}">
                                         <i class="fas fa-cart-plus"></i>
                                         <p>Current Balance</p>
-                                        <h4 style="color:#ffff">100</h4>
+                                        <h4 style="color:#ffff">{{ $settings->currency_icon }}{{ $currentBalance }}</h4>
                                     </a>
                                 </div>
 
@@ -31,7 +31,7 @@
                                     <a class="ecom__dashboard_item red" href="{{ route('vendor.orders.index') }}">
                                         <i class="fas fa-cart-plus"></i>
                                         <p>Pending Amount</p>
-                                        <h4 style="color:#ffff">100</h4>
+                                        <h4 style="color:#ffff">{{ $settings->currency_icon }}{{ $pendingAmount }}</h4>
                                     </a>
                                 </div>
 
@@ -39,7 +39,7 @@
                                     <a class="ecom__dashboard_item red" href="{{ route('vendor.orders.index') }}">
                                         <i class="fas fa-cart-plus"></i>
                                         <p>Total Withdraw</p>
-                                        <h4 style="color:#ffff">100</h4>
+                                        <h4 style="color:#ffff">{{ $settings->currency_icon }}{{ $totalWithdraw }}</h4>
                                     </a>
                                 </div>
                             </div>

@@ -19,7 +19,21 @@ class VendorWithdrawController extends Controller
     public function index(VendorWithdrawDataTable $dataTable)
     {
 
-        return $dataTable->render('vendor.withdraw.index');
+        $totalEarnings = OrderProduct::where('vendor_id', auth()->user()->id)
+            ->whereHas('order', function ($query) {
+                $query->where('payment_status', 1)->where('order_status', 'delivered');
+            })
+            ->sum(DB::raw('unit_price * qty + variant_total'));
+
+        $totalWithdraw = WithdrawRequest::where('status', 'paid')->sum('total_amount');
+
+        $currentBalance = $totalEarnings - $totalWithdraw;
+
+        $pendingAmount = WithdrawRequest::where('status', 'pending')->sum('total_amount');
+
+
+
+        return $dataTable->render('vendor.withdraw.index', compact('currentBalance', 'totalWithdraw', 'pendingAmount'));
     }
 
     /**
@@ -44,25 +58,25 @@ class VendorWithdrawController extends Controller
 
         $method = WithdrawMethod::findOrFail($request->method);
 
-        if($request->amount < $method->minimum_amount || $request->amount > $method->maximum_amount){
-           throw ValidationException::withMessages(["The amount have to be getter then $method->minimum_amount and less then $method->maximum_amount"]);
+        if ($request->amount < $method->minimum_amount || $request->amount > $method->maximum_amount) {
+            throw ValidationException::withMessages(["The amount have to be getter then $method->minimum_amount and less then $method->maximum_amount"]);
         }
 
         $totalEarnings = OrderProduct::where('vendor_id', auth()->user()->id)
-        ->whereHas('order', function($query){
-            $query->where('payment_status', 1)->where('order_status', 'delivered');
-        })
-        ->sum(DB::raw('unit_price * qty + variant_total'));
+            ->whereHas('order', function ($query) {
+                $query->where('payment_status', 1)->where('order_status', 'delivered');
+            })
+            ->sum(DB::raw('unit_price * qty + variant_total'));
 
         $totalWithdraw = WithdrawRequest::where('status', 'paid')->sum('total_amount');
 
         $currentBalance = $totalEarnings - $totalWithdraw;
 
-        if($request->amount > $currentBalance){
+        if ($request->amount > $currentBalance) {
             throw ValidationException::withMessages(['Insufficient Balance']);
         }
 
-        if(WithdrawRequest::where(['vendor_id' => auth()->user()->id, 'status' => 'pending'])->exists()){
+        if (WithdrawRequest::where(['vendor_id' => auth()->user()->id, 'status' => 'pending'])->exists()) {
             throw ValidationException::withMessages(['You already have a pending request']);
         }
 
