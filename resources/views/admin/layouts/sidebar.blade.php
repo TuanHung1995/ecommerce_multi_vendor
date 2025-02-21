@@ -136,6 +136,10 @@
 
                     <li class="{{ setActive(['admin.withdraw-method.*']) }}"><a class="nav-link"
                             href="{{ route('admin.withdraw-method.index') }}">Withdraw Mehtod</a></li>
+
+                    <li class="{{ setActive(['admin.withdraw.index']) }}"><a class="nav-link"
+                            href="{{ route('admin.withdraw.index') }}">Withdraw List</a></li>
+
                 </ul>
             </li>
 
