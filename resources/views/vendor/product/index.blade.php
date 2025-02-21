@@ -2,9 +2,9 @@
 
 @section('content')
     <!--=============================
-                                    DASHBOARD START
-                                  ==============================-->
-    <section id="wsus__dashboard">
+                                        DASHBOARD START
+                                      ==============================-->
+    <section id="ecom__dashboard">
         <div class="container-fluid">
             @include('vendor.layouts.sidebar')
 
@@ -22,8 +22,8 @@
                                 Create Products
                             </a>
                         </div>
-                        <div class="wsus__dashboard_profile">
-                            <div class="wsus__dash_pro_area">
+                        <div class="ecom__dashboard_profile">
+                            <div class="ecom__dash_pro_area">
 
                                 {{ $dataTable->table() }}
 
@@ -35,8 +35,8 @@
         </div>
     </section>
     <!--=============================
-                                    DASHBOARD START
-                                  ==============================-->
+                                        DASHBOARD START
+                                      ==============================-->
 @endsection
 
 @push('scripts')

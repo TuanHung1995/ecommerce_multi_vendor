@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\EmailConfiguration;
 use App\Models\GeneralSetting;
+use App\Models\LogoSetting;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Schema;
@@ -26,21 +28,15 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrap();
 
-        if (Schema::hasTable('general_settings')) {
-            $generalSetting = GeneralSetting::first();
-
-            /** Set time zone */
-            Config::set('app.timezone', $generalSetting->time_zone);
-        } else {
-            $generalSetting = [
-                
-            ];
-        }
+        $generalSetting = GeneralSetting::first();
+        $logoSetting = LogoSetting::first();
+        $mailSetting = EmailConfiguration::first();
+        
 
 
         /** Share variable at all view */
-        View::composer('*', function ($view) use ($generalSetting) {
-            $view->with('settings', $generalSetting);
+        View::composer('*', function ($view) use ($generalSetting, $logoSetting) {
+            $view->with(['settings' => $generalSetting, 'logoSetting' => $logoSetting]);
         });
     }
 }

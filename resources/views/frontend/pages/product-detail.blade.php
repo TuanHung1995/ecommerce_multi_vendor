@@ -6,8 +6,8 @@
 
 @section('content')
     <!--==========================
-                                                                                                                                                                                                      PRODUCT MODAL VIEW START
-                                                                                                                                                                                                    ===========================-->
+                                                                                                                                                                                                          PRODUCT MODAL VIEW START
+                                                                                                                                                                                                        ===========================-->
     <section class="product_popup_modal">
         <div class="modal fade" id="exampleModal2" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog">
@@ -17,8 +17,8 @@
                                 class="far fa-times"></i></button>
                         <div class="row">
                             <div class="col-xl-6 col-12 col-sm-10 col-md-8 col-lg-6 m-auto display">
-                                <div class="wsus__quick_view_img">
-                                    <a class="venobox wsus__pro_det_video" data-autoplay="true" data-vbtype="video"
+                                <div class="ecom__quick_view_img">
+                                    <a class="venobox ecom__pro_det_video" data-autoplay="true" data-vbtype="video"
                                         href="https://youtu.be/7m16dFI1AF8">
                                         <i class="fas fa-play"></i>
                                     </a>
@@ -47,9 +47,9 @@
                                 </div>
                             </div>
                             <div class="col-xl-6 col-12 col-sm-12 col-md-12 col-lg-6">
-                                <div class="wsus__pro_details_text">
+                                <div class="ecom__pro_details_text">
                                     <a class="title" href="#">Electronics Black Wrist Watch</a>
-                                    <p class="wsus__stock_area"><span class="in_stock">in stock</span> (167 item)</p>
+                                    <p class="ecom__stock_area"><span class="in_stock">in stock</span> (167 item)</p>
                                     <h4>$50.00 <del>$60.00</del></h4>
                                     <p class="review">
                                         <i class="fas fa-star"></i>
@@ -61,11 +61,11 @@
                                     </p>
                                     <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-                                    <div class="wsus_pro_hot_deals">
+                                    <div class="ecom_pro_hot_deals">
                                         <h5>offer ending time : </h5>
                                         <div class="simply-countdown simply-countdown-one"></div>
                                     </div>
-                                    <div class="wsus_pro_det_color">
+                                    <div class="ecom_pro_det_color">
                                         <h5>color :</h5>
                                         <ul>
                                             <li><a class="blue" href="#"><i class="far fa-check"></i></a></li>
@@ -75,7 +75,7 @@
                                             <li><a class="red" href="#"><i class="far fa-check"></i></a></li>
                                         </ul>
                                     </div>
-                                    <div class="wsus_pro__det_size">
+                                    <div class="ecom_pro__det_size">
                                         <h5>size :</h5>
                                         <ul>
                                             <li><a href="#">S</a></li>
@@ -84,7 +84,7 @@
                                             <li><a href="#">XL</a></li>
                                         </ul>
                                     </div>
-                                    <div class="wsus__quentity">
+                                    <div class="ecom__quentity">
                                         <h5>quentity :</h5>
                                         <form class="select_number">
                                             <input class="number_area" type="text" min="1" max="100"
@@ -92,7 +92,7 @@
                                         </form>
                                         <h3>$50.00</h3>
                                     </div>
-                                    <div class="wsus__selectbox">
+                                    <div class="ecom__selectbox">
                                         <div class="row">
                                             <div class="col-xl-6 col-sm-6">
                                                 <h5 class="mb-2">select:</h5>
@@ -116,7 +116,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <ul class="wsus__button_area">
+                                    <ul class="ecom__button_area">
                                         <li><a class="add_cart" href="#">add to cart</a></li>
                                         <li><a class="buy_now" href="#">buy now</a></li>
                                         <li><a href="#"><i class="fal fa-heart"></i></a></li>
@@ -124,7 +124,7 @@
                                     </ul>
                                     <p class="brand_model"><span>model :</span> 12345670</p>
                                     <p class="brand_model"><span>brand :</span> The Northland</p>
-                                    <div class="wsus__pro_det_share">
+                                    <div class="ecom__pro_det_share">
                                         <h5>share :</h5>
                                         <ul class="d-flex">
                                             <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -145,15 +145,15 @@
         </div>
     </section>
     <!--==========================
-                                                                                                                                                                                                    PRODUCT MODAL VIEW END
-                                                                                                                                                                                                  ===========================-->
+                                                                                                                                                                                                        PRODUCT MODAL VIEW END
+                                                                                                                                                                                                      ===========================-->
 
 
     <!--============================
-                                                                                                                                                                                                      BREADCRUMB START
-                                                                                                                                                                                                  ==============================-->
-    <section id="wsus__breadcrumb">
-        <div class="wsus_breadcrumb_overlay">
+                                                                                                                                                                                                          BREADCRUMB START
+                                                                                                                                                                                                      ==============================-->
+    <section id="ecom__breadcrumb">
+        <div class="ecom_breadcrumb_overlay">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -169,23 +169,23 @@
         </div>
     </section>
     <!--============================
-                                                                                                                                                                                                      BREADCRUMB END
-                                                                                                                                                                                                  ==============================-->
+                                                                                                                                                                                                          BREADCRUMB END
+                                                                                                                                                                                                      ==============================-->
 
 
     <!--============================
-                                                                                                                                                                                                      PRODUCT DETAILS START
-                                                                                                                                                                                                  ==============================-->
-    <section id="wsus__product_details">
+                                                                                                                                                                                                          PRODUCT DETAILS START
+                                                                                                                                                                                                      ==============================-->
+    <section id="ecom__product_details">
         <div class="container">
-            <div class="wsus__details_bg">
+            <div class="ecom__details_bg">
                 <div class="row">
                     <div class="col-xl-4 col-md-5 col-lg-5" id="sticky_pro_zoom_change_css">
                         <div id="sticky_pro_zoom">
                             <div class="exzoom hidden" id="exzoom">
                                 <div class="exzoom_img_box">
                                     @if ($product->video_link)
-                                        <a class="venobox wsus__pro_det_video" data-autoplay="true" data-vbtype="video"
+                                        <a class="venobox ecom__pro_det_video" data-autoplay="true" data-vbtype="video"
                                             href="{{ $product->video_link }}">
                                             <i class="fas fa-play"></i>
                                         </a>
@@ -211,14 +211,14 @@
                         </div>
                     </div>
                     <div class="col-xl-5 col-md-7 col-lg-7">
-                        <div class="wsus__pro_details_text">
+                        <div class="ecom__pro_details_text">
                             <a class="title" href="javascript:;">{{ $product->name }}</a>
                             @if ($product->qty > 0)
-                                <p class="wsus__stock_area"><span class="in_stock">in stock</span> ({{ $product->qty }}
+                                <p class="ecom__stock_area"><span class="in_stock">in stock</span> ({{ $product->qty }}
                                     item)
                                 </p>
                             @elseif ($product->qty == 0)
-                                <p class="wsus__stock_area"><span class="in_stock">stock out</span> ({{ $product->qty }}
+                                <p class="ecom__stock_area"><span class="in_stock">stock out</span> ({{ $product->qty }}
                                     item)</p>
                             @endif
                             @if (checkDiscount($product))
@@ -247,7 +247,7 @@
                             <p class="description">{!! $product->short_description !!}</p>
 
                             <form class="shopping-cart-form">
-                                <div class="wsus__selectbox">
+                                <div class="ecom__selectbox">
                                     <div class="row">
 
                                         <input type="hidden" name="product_id" value="{{ $product->id }}">
@@ -276,7 +276,7 @@
                                     </div>
                                 </div>
 
-                                <div class="wsus__quentity">
+                                <div class="ecom__quentity">
                                     <h5>quentity :</h5>
                                     <div class="select_number">
                                         <input class="number_area" name="qty" type="text" min="1"
@@ -285,7 +285,7 @@
 
                                 </div>
 
-                                <ul class="wsus__button_area">
+                                <ul class="ecom__button_area">
                                     <li><button type="submit" class="add_cart" href="#">add to cart</button></li>
                                     <li><a class="buy_now" href="#">buy now</a></li>
                                     <li><a href="#" class="add_to_wishlist" data-id="{{ $product->id }}"><i
@@ -300,7 +300,7 @@
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-12 mt-md-5 mt-lg-0">
-                        <div class="wsus_pro_det_sidebar" id="sticky_sidebar">
+                        <div class="ecom_pro_det_sidebar" id="sticky_sidebar">
                             <ul>
                                 <li>
                                     <span><i class="fal fa-truck"></i></span>
@@ -324,10 +324,10 @@
                                     </div>
                                 </li>
                             </ul>
-                            <div class="wsus__det_sidebar_banner">
+                            <div class="ecom__det_sidebar_banner">
                                 <img src="" alt="banner" class="img-fluid w-100">
-                                <div class="wsus__det_sidebar_banner_text_overlay">
-                                    <div class="wsus__det_sidebar_banner_text">
+                                <div class="ecom__det_sidebar_banner_text_overlay">
+                                    <div class="ecom__det_sidebar_banner_text">
                                         <p>Black Friday Sale</p>
                                         <h4>Up To 70% Off</h4>
                                         <a href="#" class="common_btn">shope now</a>
@@ -341,8 +341,8 @@
 
             <div class="row">
                 <div class="col-xl-12">
-                    <div class="wsus__pro_det_description">
-                        <div class="wsus__details_bg">
+                    <div class="ecom__pro_det_description">
+                        <div class="ecom__details_bg">
                             <ul class="nav nav-pills mb-3" id="pills-tab3" role="tablist">
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link active" id="pills-home-tab7" data-bs-toggle="pill"
@@ -365,7 +365,7 @@
                                     aria-labelledby="pills-home-tab7">
                                     <div class="row">
                                         <div class="col-xl-12">
-                                            <div class="wsus__description_area">
+                                            <div class="ecom__description_area">
                                                 {!! $product->long_description !!}
                                             </div>
                                         </div>
@@ -398,16 +398,16 @@
 
                                 <div class="tab-pane fade" id="pills-contact" role="tabpanel"
                                     aria-labelledby="pills-contact-tab">
-                                    <div class="wsus__pro_det_vendor">
+                                    <div class="ecom__pro_det_vendor">
                                         <div class="row">
                                             <div class="col-xl-6 col-xxl-5 col-md-6">
-                                                <div class="wsus__vebdor_img">
+                                                <div class="ecom__vebdor_img">
                                                     <img src="{{ asset($product->vendor->banner) }}" alt="vensor"
                                                         class="img-fluid w-100">
                                                 </div>
                                             </div>
                                             <div class="col-xl-6 col-xxl-7 col-md-6 mt-4 mt-md-0">
-                                                <div class="wsus__pro_det_vendor_text">
+                                                <div class="ecom__pro_det_vendor_text">
                                                     <h4>{{ $product->vendor->user->name }}</h4>
                                                     <p class="rating">
                                                         @php
@@ -432,7 +432,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-xl-12">
-                                                <div class="wsus__vendor_details">
+                                                <div class="ecom__vendor_details">
                                                     {!! $product->vendor->description !!}
                                                 </div>
                                             </div>
@@ -441,19 +441,19 @@
                                 </div>
                                 <div class="tab-pane fade" id="pills-contact2" role="tabpanel"
                                     aria-labelledby="pills-contact-tab2">
-                                    <div class="wsus__pro_det_review">
-                                        <div class="wsus__pro_det_review_single">
+                                    <div class="ecom__pro_det_review">
+                                        <div class="ecom__pro_det_review_single">
                                             <div class="row">
                                                 <div class="col-xl-8 col-lg-7">
-                                                    <div class="wsus__comment_area">
+                                                    <div class="ecom__comment_area">
                                                         <h4>Reviews <span>{{ count($reviews) }}</span></h4>
                                                         @foreach ($reviews as $review)
-                                                            <div class="wsus__main_comment">
-                                                                <div class="wsus__comment_img">
+                                                            <div class="ecom__main_comment">
+                                                                <div class="ecom__comment_img">
                                                                     <img src="{{ asset($review->user->image) }}"
                                                                         alt="user" class="img-fluid w-100">
                                                                 </div>
-                                                                <div class="wsus__comment_text reply">
+                                                                <div class="ecom__comment_text reply">
                                                                     <h6>{{ $review->user->name }}
                                                                         <span>{{ $review->rating }} <i
                                                                                 class="fas fa-star"></i></span>
@@ -504,7 +504,7 @@
                                                         @endphp
 
                                                         @if ($isBrought === true)
-                                                            <div class="wsus__post_comment rev_mar" id="sticky_sidebar3">
+                                                            <div class="ecom__post_comment rev_mar" id="sticky_sidebar3">
                                                                 <h4>write a Review</h4>
                                                                 <form action="{{ route('user.review.create') }}"
                                                                     enctype="multipart/form-data" method="POST">
@@ -516,7 +516,7 @@
                                                                     <div class="row">
 
                                                                         <div class="col-xl-12 mb-4">
-                                                                            <div class="wsus__single_com">
+                                                                            <div class="ecom__single_com">
                                                                                 <select name="rating" id=""
                                                                                     class="form-control">
                                                                                     <option value="">Select</option>
@@ -531,7 +531,7 @@
 
                                                                         <div class="col-xl-12">
                                                                             <div class="col-xl-12">
-                                                                                <div class="wsus__single_com">
+                                                                                <div class="ecom__single_com">
                                                                                     <textarea cols="3" rows="3" name="review" placeholder="Write your review"></textarea>
                                                                                 </div>
                                                                             </div>
@@ -568,18 +568,18 @@
         </div>
     </section>
     <!--============================
-                                                                                                                                                                                                          PRODUCT DETAILS END
-                                                                                                                                                                                                      ==============================-->
+                                                                                                                                                                                                              PRODUCT DETAILS END
+                                                                                                                                                                                                          ==============================-->
 
 
     <!--============================
-                                                                                                                                                                                                          RELATED PRODUCT START
-                                                                                                                                                                                                      ==============================-->
-    <section id="wsus__flash_sell">
+                                                                                                                                                                                                              RELATED PRODUCT START
+                                                                                                                                                                                                          ==============================-->
+    <section id="ecom__flash_sell">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
-                    <div class="wsus__section_header">
+                    <div class="ecom__section_header">
                         <h3>Related Products</h3>
                         <a class="see_btn" href="#">see more <i class="fas fa-caret-right"></i></a>
                     </div>
@@ -587,22 +587,22 @@
             </div>
             <div class="row flash_sell_slider">
                 <div class="col-xl-3 col-sm-6 col-lg-4">
-                    <div class="wsus__product_item">
-                        <span class="wsus__new">New</span>
-                        <span class="wsus__minus">-20%</span>
-                        <a class="wsus__pro_link" href="product_details.html">
+                    <div class="ecom__product_item">
+                        <span class="ecom__new">New</span>
+                        <span class="ecom__minus">-20%</span>
+                        <a class="ecom__pro_link" href="product_details.html">
                             <img src="" alt="product" class="img-fluid w-100 img_1" />
                             <img src="" alt="product" class="img-fluid w-100 img_2" />
                         </a>
-                        <ul class="wsus__single_pro_icon">
+                        <ul class="ecom__single_pro_icon">
                             <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
                                         class="far fa-eye"></i></a></li>
                             <li><a href="#"><i class="far fa-heart"></i></a></li>
                             <li><a href="#"><i class="far fa-random"></i></a>
                         </ul>
-                        <div class="wsus__product_details">
-                            <a class="wsus__category" href="#">Electronics </a>
-                            <p class="wsus__pro_rating">
+                        <div class="ecom__product_details">
+                            <a class="ecom__category" href="#">Electronics </a>
+                            <p class="ecom__pro_rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -610,28 +610,28 @@
                                 <i class="fas fa-star-half-alt"></i>
                                 <span>(133 review)</span>
                             </p>
-                            <a class="wsus__pro_name" href="#">hp 24" FHD monitore</a>
-                            <p class="wsus__price">$159 <del>$200</del></p>
+                            <a class="ecom__pro_name" href="#">hp 24" FHD monitore</a>
+                            <p class="ecom__price">$159 <del>$200</del></p>
                             <a class="add_cart" href="#">add to cart</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-6 col-lg-4">
-                    <div class="wsus__product_item">
-                        <span class="wsus__new">New</span>
-                        <a class="wsus__pro_link" href="product_details.html">
+                    <div class="ecom__product_item">
+                        <span class="ecom__new">New</span>
+                        <a class="ecom__pro_link" href="product_details.html">
                             <img src="" alt="product" class="img-fluid w-100 img_1" />
                             <img src="" alt="product" class="img-fluid w-100 img_2" />
                         </a>
-                        <ul class="wsus__single_pro_icon">
+                        <ul class="ecom__single_pro_icon">
                             <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
                                         class="far fa-eye"></i></a></li>
                             <li><a href="#"><i class="far fa-heart"></i></a></li>
                             <li><a href="#"><i class="far fa-random"></i></a>
                         </ul>
-                        <div class="wsus__product_details">
-                            <a class="wsus__category" href="#">fashion </a>
-                            <p class="wsus__pro_rating">
+                        <div class="ecom__product_details">
+                            <a class="ecom__category" href="#">fashion </a>
+                            <p class="ecom__pro_rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -639,28 +639,28 @@
                                 <i class="fas fa-star-half-alt"></i>
                                 <span>(17 review)</span>
                             </p>
-                            <a class="wsus__pro_name" href="#">men's casual fashion watch</a>
-                            <p class="wsus__price">$159 <del>$200</del></p>
+                            <a class="ecom__pro_name" href="#">men's casual fashion watch</a>
+                            <p class="ecom__price">$159 <del>$200</del></p>
                             <a class="add_cart" href="#">add to cart</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-6 col-lg-4">
-                    <div class="wsus__product_item">
-                        <span class="wsus__minus">-20%</span>
-                        <a class="wsus__pro_link" href="product_details.html">
+                    <div class="ecom__product_item">
+                        <span class="ecom__minus">-20%</span>
+                        <a class="ecom__pro_link" href="product_details.html">
                             <img src="" alt="product" class="img-fluid w-100 img_1" />
                             <img src="" alt="product" class="img-fluid w-100 img_2" />
                         </a>
-                        <ul class="wsus__single_pro_icon">
+                        <ul class="ecom__single_pro_icon">
                             <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
                                         class="far fa-eye"></i></a></li>
                             <li><a href="#"><i class="far fa-heart"></i></a></li>
                             <li><a href="#"><i class="far fa-random"></i></a>
                         </ul>
-                        <div class="wsus__product_details">
-                            <a class="wsus__category" href="#">fashion </a>
-                            <p class="wsus__pro_rating">
+                        <div class="ecom__product_details">
+                            <a class="ecom__category" href="#">fashion </a>
+                            <p class="ecom__pro_rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -668,29 +668,29 @@
                                 <i class="fas fa-star-half-alt"></i>
                                 <span>(120 review)</span>
                             </p>
-                            <a class="wsus__pro_name" href="#">men's fashion sholder bag</a>
-                            <p class="wsus__price">$159 <del>$200</del></p>
+                            <a class="ecom__pro_name" href="#">men's fashion sholder bag</a>
+                            <p class="ecom__price">$159 <del>$200</del></p>
                             <a class="add_cart" href="#">add to cart</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-6 col-lg-4">
-                    <div class="wsus__product_item">
-                        <span class="wsus__new">New</span>
-                        <span class="wsus__minus">-20%</span>
-                        <a class="wsus__pro_link" href="product_details.html">
+                    <div class="ecom__product_item">
+                        <span class="ecom__new">New</span>
+                        <span class="ecom__minus">-20%</span>
+                        <a class="ecom__pro_link" href="product_details.html">
                             <img src="" alt="product" class="img-fluid w-100 img_1" />
                             <img src="" alt="product" class="img-fluid w-100 img_2" />
                         </a>
-                        <ul class="wsus__single_pro_icon">
+                        <ul class="ecom__single_pro_icon">
                             <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
                                         class="far fa-eye"></i></a></li>
                             <li><a href="#"><i class="far fa-heart"></i></a></li>
                             <li><a href="#"><i class="far fa-random"></i></a>
                         </ul>
-                        <div class="wsus__product_details">
-                            <a class="wsus__category" href="#">fashion </a>
-                            <p class="wsus__pro_rating">
+                        <div class="ecom__product_details">
+                            <a class="ecom__category" href="#">fashion </a>
+                            <p class="ecom__pro_rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -698,28 +698,28 @@
                                 <i class="fas fa-star-half-alt"></i>
                                 <span>(72 review)</span>
                             </p>
-                            <a class="wsus__pro_name" href="#">men's casual shoes</a>
-                            <p class="wsus__price">$159 <del>$200</del></p>
+                            <a class="ecom__pro_name" href="#">men's casual shoes</a>
+                            <p class="ecom__price">$159 <del>$200</del></p>
                             <a class="add_cart" href="#">add to cart</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-6 col-lg-4">
-                    <div class="wsus__product_item">
-                        <span class="wsus__minus">-20%</span>
-                        <a class="wsus__pro_link" href="product_details.html">
+                    <div class="ecom__product_item">
+                        <span class="ecom__minus">-20%</span>
+                        <a class="ecom__pro_link" href="product_details.html">
                             <img src="" alt="product" class="img-fluid w-100 img_1" />
                             <img src="" alt="product" class="img-fluid w-100 img_2" />
                         </a>
-                        <ul class="wsus__single_pro_icon">
+                        <ul class="ecom__single_pro_icon">
                             <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
                                         class="far fa-eye"></i></a></li>
                             <li><a href="#"><i class="far fa-heart"></i></a></li>
                             <li><a href="#"><i class="far fa-random"></i></a>
                         </ul>
-                        <div class="wsus__product_details">
-                            <a class="wsus__category" href="#">fashion </a>
-                            <p class="wsus__pro_rating">
+                        <div class="ecom__product_details">
+                            <a class="ecom__category" href="#">fashion </a>
+                            <p class="ecom__pro_rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -727,8 +727,8 @@
                                 <i class="fas fa-star-half-alt"></i>
                                 <span>(17 review)</span>
                             </p>
-                            <a class="wsus__pro_name" href="#">men's casual fashion watch</a>
-                            <p class="wsus__price">$159 <del>$200</del></p>
+                            <a class="ecom__pro_name" href="#">men's casual fashion watch</a>
+                            <p class="ecom__price">$159 <del>$200</del></p>
                             <a class="add_cart" href="#">add to cart</a>
                         </div>
                     </div>
@@ -738,6 +738,6 @@
         </div>
     </section>
     <!--============================
-                                                                                                                                                                                                          RELATED PRODUCT END
-                                                                                                                                                                                                      ==============================-->
+                                                                                                                                                                                                              RELATED PRODUCT END
+                                                                                                                                                                                                          ==============================-->
 @endsection

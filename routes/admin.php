@@ -6,6 +6,9 @@ use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\AdminReviewController;
 use App\Http\Controllers\Backend\AdminVendorProfile;
 use App\Http\Controllers\Backend\AdvertisementController;
+use App\Http\Controllers\Backend\BlogCategoryController;
+use App\Http\Controllers\Backend\BlogCommentController;
+use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ChildCategoryController;
@@ -177,6 +180,14 @@ Route::put('about/update', [AboutController::class, 'update'])->name('about.upda
 /** Terms And Condition Page */
 Route::get('terms-and-conditions', [TermsAndConditionController::class, 'index'])->name('terms-and-conditions.index');
 Route::put('terms-and-conditions/update', [TermsAndConditionController::class, 'update'])->name('terms-and-conditions.update');
+
+/** Blog Routes */
+Route::put('blog-category/status-change', [BlogCategoryController::class, 'changeStatus'])->name('blog-category.status-change');
+Route::resource('blog-category', BlogCategoryController::class);
+Route::put('blog/status-change', [BlogController::class, 'changeStatus'])->name('blog.status-change');
+Route::resource('blog', BlogController::class);
+Route::get('blog-comments', [BlogCommentController::class, 'index'])->name('blog-comments.index');
+Route::delete('blog-comments/{id}/destroy', [BlogCommentController::class, 'destroy'])->name('blog-comments.destroy');
 
 /** Footer Routes */
 Route::resource('footer-info', FooterInfoController::class);

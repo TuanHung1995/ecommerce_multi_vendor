@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\FlashSaleController;
 use App\Http\Controllers\Backend\VendorController;
+use App\Http\Controllers\Frontend\BlogController;
 use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\FlashSaleController as FrontendFlashSaleController;
@@ -82,6 +83,9 @@ Route::get('wishlist/add-product', [WishlistController::class, 'addToWishlist'])
 /** Product Track Route */
 Route::get('product-traking', [ProductTrackController::class, 'index'])->name('product-traking.index');
 
+Route::get('blog-details/{slug}', [BlogController::class, 'blogDetails'])->name('blog-details');
+Route::get('blog', [BlogController::class, 'blog'])->name('blog');
+
 /** About Page */
 Route::get('about', [PageController::class, 'about'])->name('about');
 
@@ -118,8 +122,9 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
     Route::get('vendor-request', [UserVendorResquestController::class, 'index'])->name('vendor-request.index');
     Route::post('vendor-request', [UserVendorResquestController::class, 'create'])->name('vendor-request.create');
 
-
-
+    /** Blog Routes */
+    Route::post('blog-comment', [BlogController::class, 'comment'])->name('blog-comment');
+    
     /** Checkout Routes */
     Route::get('checkout', [CheckoutController::class, 'index'])->name('checkout');
     Route::post('checkout/address-create', [CheckOutController::class, 'createAddress'])->name('checkout.address.create');

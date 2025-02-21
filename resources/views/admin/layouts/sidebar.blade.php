@@ -1,16 +1,17 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="index.html">Stisla</a>
+            <a href="">{{ $settings->site_name }}</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">St</a>
+            <a href="">||</a>
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
             <li class="dropdown active">
                 <a href="{{ route('admin.dashboard') }}" class="nav-link"><i
                         class="fas fa-fire"></i><span>Dashboard</span></a>
+
             </li>
             <li class="menu-header">Stater</li>
             <li
@@ -154,6 +155,22 @@
                 </ul>
             </li>
 
+            <li
+                class="dropdown {{ setActive(['admin.blog-category.*', 'admin.blog.*', 'admin.blog-comments.index']) }}">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i
+                        class="fab fa-blogger-b"></i> <span>Manage Blog</span></a>
+                <ul class="dropdown-menu">
+
+                    <li class="{{ setActive(['admin.blog-category.*']) }}"><a class="nav-link"
+                            href="{{ route('admin.blog-category.index') }}">Categories</a></li>
+                    <li class="{{ setActive(['admin.blog.*']) }}"><a class="nav-link"
+                            href="{{ route('admin.blog.index') }}">Blogs</a></li>
+                    <li class="{{ setActive(['admin.blog-comments.index']) }}"><a class="nav-link"
+                            href="{{ route('admin.blog-comments.index') }}">Blog Comments</a></li>
+
+                </ul>
+            </li>
+
             <li><a class="nav-link {{ setActive(['admin.advertisement.*']) }}"
                     href="{{ route('admin.advertisement.index') }}"><i class="fas fa-ad"></i>
                     <span>Advertisement</span></a></li>
@@ -185,11 +202,11 @@
 
             <li
                 class="dropdown {{ setActive([
-                     'admin.vendor-requests.*', 
-                     'admin.customer.index', 
-                     'admin.vendor-list.index', 
-                     'admin.admin-list.index', 
-                     'admin.manage-user.index'
+                    'admin.vendor-requests.*',
+                    'admin.customer.index',
+                    'admin.vendor-list.index',
+                    'admin.admin-list.index',
+                    'admin.manage-user.index',
                 ]) }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-users"></i>
                     <span>Users</span></a>

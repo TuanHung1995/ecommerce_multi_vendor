@@ -6,10 +6,10 @@
 
 @section('content')
     <!--============================
-                                                                                                    BREADCRUMB START
-                                                                                                ==============================-->
-    <section id="wsus__breadcrumb">
-        <div class="wsus_breadcrumb_overlay">
+                                                                                                        BREADCRUMB START
+                                                                                                    ==============================-->
+    <section id="ecom__breadcrumb">
+        <div class="ecom_breadcrumb_overlay">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -25,54 +25,54 @@
         </div>
     </section>
     <!--============================
-                                                                                                  BREADCRUMB END
-                                                                                              ==============================-->
+                                                                                                      BREADCRUMB END
+                                                                                                  ==============================-->
 
 
     <!--============================
-                                                                                                  CART VIEW PAGE START
-                                                                                              ==============================-->
-    <section id="wsus__cart_view">
+                                                                                                      CART VIEW PAGE START
+                                                                                                  ==============================-->
+    <section id="ecom__cart_view">
         <div class="container">
             <div class="row">
                 <div class="col-xl-9">
-                    <div class="wsus__cart_list">
+                    <div class="ecom__cart_list">
                         <div class="table-responsive">
                             <table>
                                 <tbody>
                                     <tr class="d-flex">
-                                        <th class="wsus__pro_img">
+                                        <th class="ecom__pro_img">
                                             product item
                                         </th>
 
-                                        <th class="wsus__pro_name">
+                                        <th class="ecom__pro_name">
                                             product details
                                         </th>
 
-                                        <th class="wsus__pro_tk">
+                                        <th class="ecom__pro_tk">
                                             unit price
                                         </th>
 
-                                        <th class="wsus__pro_tk">
+                                        <th class="ecom__pro_tk">
                                             total
                                         </th>
 
-                                        <th class="wsus__pro_select">
+                                        <th class="ecom__pro_select">
                                             quantity
                                         </th>
 
-                                        <th class="wsus__pro_icon">
+                                        <th class="ecom__pro_icon">
                                             <button class="common_btn clear_cart">clear cart</button>
                                         </th>
                                     </tr>
 
                                     @foreach ($cartItems as $item)
                                         <tr class="d-flex">
-                                            <td class="wsus__pro_img"><img src="{{ asset($item->options->image) }}"
+                                            <td class="ecom__pro_img"><img src="{{ asset($item->options->image) }}"
                                                     alt="product" class="img-fluid w-100">
                                             </td>
 
-                                            <td class="wsus__pro_name">
+                                            <td class="ecom__pro_name">
                                                 <p>{!! $item->name !!}</p>
                                                 @foreach ($item->options->variants as $key => $variant)
                                                     <span>{{ $key }}: {{ $variant['name'] }}
@@ -81,17 +81,17 @@
                                                 @endforeach
                                             </td>
 
-                                            <td class="wsus__pro_tk">
+                                            <td class="ecom__pro_tk">
                                                 <h6>{{ $settings->currency_icon . $item->price }}</h6>
                                             </td>
 
-                                            <td class="wsus__pro_tk">
+                                            <td class="ecom__pro_tk">
                                                 <h6 id="{{ $item->rowId }}">
                                                     {{ $settings->currency_icon . ($item->price + $item->options->variants_total) * $item->qty }}
                                                 </h6>
                                             </td>
 
-                                            <td class="wsus__pro_select">
+                                            <td class="ecom__pro_select">
                                                 <form class="product_qty_wrapper">
                                                     <button class="btn btn-danger product-decrement">-</button>
                                                     <input class="product-qty" data-rowid="{{ $item->rowId }}"
@@ -101,7 +101,7 @@
                                                 </form>
                                             </td>
 
-                                            <td class="wsus__pro_icon">
+                                            <td class="ecom__pro_icon">
                                                 <a href="{{ route('cart.remove-product', $item->rowId) }}"><i
                                                         class="far fa-times"></i></a>
                                             </td>
@@ -110,7 +110,7 @@
 
                                     @if (count($cartItems) === 0)
                                         <tr class="d-flex">
-                                            <td class="wsus__pro_icon" rowspan="2" style="width:100%">
+                                            <td class="ecom__pro_icon" rowspan="2" style="width:100%">
                                                 Cart is empty!
                                             </td>
                                         </tr>
@@ -121,7 +121,7 @@
                     </div>
                 </div>
                 <div class="col-xl-3">
-                    <div class="wsus__cart_list_footer_button" id="sticky_sidebar">
+                    <div class="ecom__cart_list_footer_button" id="sticky_sidebar">
                         <h6>total cart</h6>
                         <p>subtotal: <span id="sub_total">{{ $settings->currency_icon }}{{ getCartTotal() }}</span></p>
                         <p>coupon(-): <span id="discount">{{ $settings->currency_icon }}{{ getCartDiscount() }}</span>
@@ -142,11 +142,11 @@
             </div>
         </div>
     </section>
-    <section id="wsus__single_banner">
+    <section id="ecom__single_banner">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-lg-6">
-                    <div class="wsus__single_banner_content">
+                    <div class="ecom__single_banner_content">
                         @if ($cartpage_banner_section->banner_one->status == 1)
                             <a href="{{ $cartpage_banner_section->banner_one->banner_url }}">
                                 <img class="img-gluid"
@@ -156,7 +156,7 @@
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6">
-                    <div class="wsus__single_banner_content single_banner_2">
+                    <div class="ecom__single_banner_content single_banner_2">
                         @if ($cartpage_banner_section->banner_two->status == 1)
                             <a href="{{ $cartpage_banner_section->banner_two->banner_url }}">
                                 <img class="img-gluid"
@@ -169,8 +169,8 @@
         </div>
     </section>
     <!--============================
-                                                                                                    CART VIEW PAGE END
-                                                                                              ==============================-->
+                                                                                                        CART VIEW PAGE END
+                                                                                                  ==============================-->
 @endsection
 
 @push('scripts')

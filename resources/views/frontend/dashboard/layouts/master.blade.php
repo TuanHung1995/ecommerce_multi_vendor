@@ -39,10 +39,10 @@
     <!--=============================
     DASHBOARD MENU START
   ==============================-->
-    <div class="wsus__dashboard_menu">
-        <div class="wsusd__dashboard_user">
-            <img src="images/dashboard_user.jpg" alt="img" class="img-fluid">
-            <p>anik roy</p>
+    <div class="ecom__dashboard_menu">
+        <div class="ecomd__dashboard_user">
+            <img src="{{ asset(auth()->user()->image) }}" alt="img" class="img-fluid">
+            <p>{{ auth()->user()->name }}</p>
         </div>
     </div>
     <!--=============================
@@ -56,7 +56,7 @@
     <!--============================
       SCROLL BUTTON START
     ==============================-->
-    <div class="wsus__scroll_btn">
+    <div class="ecom__scroll_btn">
         <i class="fas fa-chevron-up"></i>
     </div>
     <!--============================

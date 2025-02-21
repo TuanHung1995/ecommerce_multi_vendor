@@ -11,9 +11,9 @@
 
 @section('content')
     <!--=============================
-            DASHBOARD START
-          ==============================-->
-    <section id="wsus__dashboard">
+                DASHBOARD START
+              ==============================-->
+    <section id="ecom__dashboard">
         <div class="container-fluid">
             @include('vendor.layouts.sidebar')
 
@@ -21,19 +21,19 @@
                 <div class="col-xl-9 col-xxl-10 col-lg-9 ms-auto">
                     <div class="dashboard_content mt-2 mt-md-0">
                         <h3><i class="far fa-user"></i> Order Details</h3>
-                        <div class="wsus__dashboard_profile">
+                        <div class="ecom__dashboard_profile">
 
                             <!--============================
-                                INVOICE PAGE START
-                            ==============================-->
+                                    INVOICE PAGE START
+                                ==============================-->
                             <section id="" class="invoice-print">
                                 <div class="">
-                                    <div class="wsus__invoice_area">
-                                        <div class="wsus__invoice_header">
-                                            <div class="wsus__invoice_content">
+                                    <div class="ecom__invoice_area">
+                                        <div class="ecom__invoice_header">
+                                            <div class="ecom__invoice_content">
                                                 <div class="row">
                                                     <div class="col-xl-4 col-md-4 mb-5 mb-md-0">
-                                                        <div class="wsus__invoice_single">
+                                                        <div class="ecom__invoice_single">
                                                             <h5>Billing Information</h5>
                                                             <h6>{{ $address->name }}</h6>
                                                             <p>{{ $address->email }}</p>
@@ -44,7 +44,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-4 col-md-4 mb-5 mb-md-0">
-                                                        <div class="wsus__invoice_single text-md-center">
+                                                        <div class="ecom__invoice_single text-md-center">
                                                             <h5>shipping information</h5>
                                                             <h6>{{ $address->name }}</h6>
                                                             <p>{{ $address->email }}</p>
@@ -55,7 +55,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-4 col-md-4">
-                                                        <div class="wsus__invoice_single text-md-end">
+                                                        <div class="ecom__invoice_single text-md-end">
                                                             <h5>Order id: #{{ $order->invocie_id }}</h5>
                                                             <h6>Order status:
                                                                 {{ config('order_status.order_status_admin')[$order->order_status]['status'] }}
@@ -68,7 +68,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="wsus__invoice_description">
+                                            <div class="ecom__invoice_description">
                                                 <div class="table-responsive">
                                                     <table class="table">
                                                         <tr>
@@ -129,7 +129,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="wsus__invoice_footer">
+                                        <div class="ecom__invoice_footer">
 
                                             <p><span>Total Amount:</span> {{ $settings->currency_icon }}
                                                 {{ $total }} </p>
@@ -138,8 +138,8 @@
                                 </div>
                             </section>
                             <!--============================
-                                INVOICE PAGE END
-                            ==============================-->
+                                    INVOICE PAGE END
+                                ==============================-->
 
                             <div class="row">
                                 <div class="col-md-4">
@@ -170,8 +170,8 @@
         </div>
     </section>
     <!--=============================
-            DASHBOARD START
-          ==============================-->
+                DASHBOARD START
+              ==============================-->
 @endsection
 
 @push('scripts')

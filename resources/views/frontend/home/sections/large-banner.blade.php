@@ -1,4 +1,4 @@
-<section id="wsus__large_banner">
+<section id="ecom__large_banner">
     <div class="container">
         <div class="row">
             <div class="cl-xl-12">
