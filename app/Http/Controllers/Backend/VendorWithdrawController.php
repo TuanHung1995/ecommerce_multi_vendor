@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\DataTables\VendorWithdrawDataTable;
 use App\Http\Controllers\Controller;
 use App\Models\OrderProduct;
+use App\Models\WithdrawMethod;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -15,7 +16,7 @@ class VendorWithdrawController extends Controller
      */
     public function index(VendorWithdrawDataTable $dataTable)
     {
-        
+
         return $dataTable->render('vendor.withdraw.index');
     }
 
@@ -24,7 +25,8 @@ class VendorWithdrawController extends Controller
      */
     public function create()
     {
-        //
+        $methods = WithdrawMethod::all();
+        return view('vendor.withdraw.create', compact('methods'));
     }
 
     /**
@@ -40,7 +42,9 @@ class VendorWithdrawController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $methodInfo = WithdrawMethod::findOrFail($id);
+
+        return response($methodInfo);
     }
 
     /**
