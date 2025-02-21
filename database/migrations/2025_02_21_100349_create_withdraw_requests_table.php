@@ -19,7 +19,7 @@ return new class extends Migration
             $table->double('withdraw_amount');
             $table->double('withdraw_charge');
             $table->text('account_info');
-            $table->enum('status', ['pending', 'paid', 'decline']);
+            $table->enum('status', ['pending', 'paid', 'declined']);
             $table->timestamps();
         });
     }
