@@ -6,8 +6,8 @@
 
 @section('content')
     <!--============================
-                BREADCRUMB START
-            ==============================-->
+                        BREADCRUMB START
+                    ==============================-->
     <section id="ecom__breadcrumb">
         <div class="ecom_breadcrumb_overlay">
             <div class="container">
@@ -15,8 +15,8 @@
                     <div class="col-12">
                         <h4>our latest blogs</h4>
                         <ul>
-                            <li><a href="#">home</a></li>
-                            <li><a href="#">blogs</a></li>
+                            <li><a href="{{ url('/') }}">home</a></li>
+                            <li><a href="{{ route('blogs') }}">blogs</a></li>
                         </ul>
                     </div>
                 </div>
@@ -24,20 +24,20 @@
         </div>
     </section>
     <!--============================
-                BREADCRUMB END
-            ==============================-->
+                        BREADCRUMB END
+                    ==============================-->
 
 
     <!--============================
-                BLOGS PAGE START
-            ==============================-->
+                        BLOGS PAGE START
+                    ==============================-->
     <section id="ecom__blogs">
         <div class="container">
             @if (request()->has('search'))
                 <h5>Search: {{ request()->search }}</h5>
                 <hr>
             @elseif (request()->has('category'))
-                <h5>Category: {{ request()->category }}</h5>
+                <h5>Search: {{ request()->category }}</h5>
                 <hr>
             @endif
             <div class="row">
@@ -78,6 +78,6 @@
         </div>
     </section>
     <!--============================
-                BLOGS PAGE END
-            ==============================-->
+                        BLOGS PAGE END
+                    ==============================-->
 @endsection

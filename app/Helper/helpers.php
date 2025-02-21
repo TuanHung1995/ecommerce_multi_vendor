@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\GeneralSetting;
 use Illuminate\Support\Facades\Session;
 
 /** Set sidebar item active */
@@ -58,7 +59,7 @@ function productType($type)
 function getCartTotal()
 {
   $total = 0;
-  foreach (Cart::content() as $product) {
+  foreach (\Cart::content() as $product) {
     $total += ($product->price + $product->options->variants_total) * $product->qty;
   }
   return $total;
@@ -140,5 +141,13 @@ function getOrderDiscount($order)
 /** limit text */
 function limitText($text, $limit = 20)
 {
-    return Str::limit($text, $limit);
+    return \Str::limit($text, $limit);
+}
+
+
+function getCurrencyIcon()
+{
+    $icon = GeneralSetting::first();
+
+    return $icon->currency_icon;
 }
