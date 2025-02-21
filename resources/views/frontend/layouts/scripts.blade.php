@@ -8,7 +8,7 @@
         });
 
         // add to cart
-        $('.shopping-cart-form').on('submit', function(e) {
+        $(document).on('submit', '.shopping-cart-form', function(e) {
             e.preventDefault();
             let formData = $(this).serialize();
             $.ajax({
@@ -125,7 +125,7 @@
         }
 
         // Add to wishlist
-        $('.add_to_wishlist').on('click', function(e) {
+        $(document).on('click', '.add_to_wishlist', function(e) {
             e.preventDefault();
             let id = $(this).data('id');
 
@@ -181,6 +181,27 @@
                         })
                     }
                     $('.subscribe_btn').text('Subscribe');
+                }
+            })
+        })
+
+        $('.show_product_modal').on('click', function() {
+            let id = $(this).data('id');
+
+            $.ajax({
+                mehtod: 'GET',
+                url: '{{ route('show-product-modal', ':id') }}'.replace(":id", id),
+                beforeSend: function() {
+                    $('.product-modal-content').html('<span class="loader"></span>')
+                },
+                success: function(response) {
+                    $('.product-modal-content').html(response)
+                },
+                error: function(xhr, status, error) {
+
+                },
+                complete: function() {
+
                 }
             })
         })

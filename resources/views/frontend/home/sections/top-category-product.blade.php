@@ -1,8 +1,6 @@
 @php
-    $popularCategories = json_decode($popularCategory->value);
+    $popularCategories = json_decode($popularCategory->value, true);
 @endphp
-
-
 <section id="ecom__monthly_top" class="ecom__monthly_top_2">
     <div class="container">
         <div class="row">
@@ -39,21 +37,24 @@
 
                                 if (array_keys($lastKey)[0] === 'category') {
                                     $category = \App\Models\Category::find($lastKey['category']);
-                                    $products[] = \App\Models\Product::with('reviews')
+                                    $products[] = \App\Models\Product::withAvg('reviews', 'rating')
+                                        ->with(['variants', 'category', 'productImageGalleries'])
                                         ->where('category_id', $category->id)
                                         ->orderBy('id', 'DESC')
                                         ->take(12)
                                         ->get();
                                 } elseif (array_keys($lastKey)[0] === 'sub_category') {
                                     $category = \App\Models\SubCategory::find($lastKey['sub_category']);
-                                    $products[] = \App\Models\Product::with('reviews')
+                                    $products[] = \App\Models\Product::withAvg('reviews', 'rating')
+                                        ->with(['variants', 'category', 'productImageGalleries'])
                                         ->where('sub_category_id', $category->id)
                                         ->orderBy('id', 'DESC')
                                         ->take(12)
                                         ->get();
                                 } else {
                                     $category = \App\Models\ChildCategory::find($lastKey['child_category']);
-                                    $products[] = \App\Models\Product::with('reviews')
+                                    $products[] = \App\Models\Product::withAvg('reviews', 'rating')
+                                        ->with(['variants', 'category', 'productImageGalleries'])
                                         ->where('child_category_id', $category->id)
                                         ->orderBy('id', 'DESC')
                                         ->take(12)
@@ -82,18 +83,14 @@
                                     <div class="ecom__hot_deals__single_text">
                                         <h5>{!! limitText($item->name) !!}</h5>
                                         <p class="ecom__rating">
-                                            @php
-                                                $avgRating = $item->reviews()->avg('rating');
-                                                $fullRating = round($avgRating);
-                                            @endphp
-
                                             @for ($i = 1; $i <= 5; $i++)
-                                                @if ($i <= $fullRating)
+                                                @if ($i <= $item->reviews_avg_rating)
                                                     <i class="fas fa-star"></i>
                                                 @else
                                                     <i class="far fa-star"></i>
                                                 @endif
                                             @endfor
+
                                         </p>
                                         @if (checkDiscount($item))
                                             <p class="ecom__tk">{{ $settings->currency_icon }}{{ $item->offer_price }}
