@@ -79,11 +79,11 @@ class WithdrawMethodDataTable extends DataTable
             Column::computed('action')
                 ->exportable(false)
                 ->printable(false)
-                ->width(100)
+                ->width(200)
                 ->addClass('text-center'),
         ];
     }
-    
+
     /**
      * Get the filename for export.
      */
