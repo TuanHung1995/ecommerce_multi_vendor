@@ -3,6 +3,7 @@
 namespace App\DataTables;
 
 use App\Models\VendorWithdraw;
+use App\Models\WithdrawRequest;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
@@ -22,16 +23,39 @@ class VendorWithdrawDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-            ->addColumn('action', 'vendorwithdraw.action')
+            ->addColumn('action', function ($query) {
+                $showBtn = "<a href='" . route('vendor.withdraw-request.show', $query->id) . "' class='btn btn-primary'><i class='far fa-eye'></i></a>";
+
+                return $showBtn;
+            })
+            ->addColumn('status', function ($query) {
+                if ($query->status == 'pending') {
+                    return "<span class='badge bg-warning'>pending</span>";
+                } elseif ($query->status == 'paid') {
+                    return "<span class='badge bg-success'>Paid</span>";
+                } else {
+                    return "<span class='badge bg-danger'>Declined</span>";
+                }
+            })
+            ->addColumn('total_amount', function ($query) {
+                return getCurrencyIcon() . $query->total_amount;
+            })
+            ->addColumn('withdraw_amount', function ($query) {
+                return getCurrencyIcon() . $query->withdraw_amount;
+            })
+            ->addColumn('withdraw_charge', function ($query) {
+                return getCurrencyIcon() . $query->withdraw_charge;
+            })
+            ->rawColumns(['status', 'action'])
             ->setRowId('id');
     }
 
     /**
      * Get the query source of dataTable.
      */
-    public function query(VendorWithdraw $model): QueryBuilder
+    public function query(WithdrawRequest $model): QueryBuilder
     {
-        return $model->newQuery();
+        return $model->where('vendor_id', auth()->user()->id)->newQuery();
     }
 
     /**
@@ -40,20 +64,20 @@ class VendorWithdrawDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-                    ->setTableId('vendorwithdraw-table')
-                    ->columns($this->getColumns())
-                    ->minifiedAjax()
-                    //->dom('Bfrtip')
-                    ->orderBy(1)
-                    ->selectStyleSingle()
-                    ->buttons([
-                        Button::make('excel'),
-                        Button::make('csv'),
-                        Button::make('pdf'),
-                        Button::make('print'),
-                        Button::make('reset'),
-                        Button::make('reload')
-                    ]);
+            ->setTableId('vendorwithdraw-table')
+            ->columns($this->getColumns())
+            ->minifiedAjax()
+            //->dom('Bfrtip')
+            ->orderBy(1)
+            ->selectStyleSingle()
+            ->buttons([
+                Button::make('excel'),
+                Button::make('csv'),
+                Button::make('pdf'),
+                Button::make('print'),
+                Button::make('reset'),
+                Button::make('reload')
+            ]);
     }
 
     /**
@@ -62,15 +86,19 @@ class VendorWithdrawDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-            Column::computed('action')
-                  ->exportable(false)
-                  ->printable(false)
-                  ->width(60)
-                  ->addClass('text-center'),
+
             Column::make('id'),
-            Column::make('add your columns'),
-            Column::make('created_at'),
-            Column::make('updated_at'),
+            Column::make('method'),
+            Column::make('total_amount'),
+            Column::make('withdraw_amount'),
+            Column::make('withdraw_charge'),
+            Column::make('status'),
+
+            Column::computed('action')
+                ->exportable(false)
+                ->printable(false)
+                ->width(60)
+                ->addClass('text-center'),
         ];
     }
 
