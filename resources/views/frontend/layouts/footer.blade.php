@@ -13,20 +13,19 @@
         return \App\Models\FooterGridThree::where('status', 1)->get();
     });
 @endphp
-
 <footer class="footer_2">
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-xl-3 col-sm-7 col-md-6 col-lg-3">
                 <div class="ecom__footer_content">
-                    <a class="ecom__footer_2_logo" href="#">
+                    <a class="ecom__footer_2_logo" href="{{ url('/') }}">
                         <img src="{{ asset(@$footerInfo->logo) }}" alt="logo">
                     </a>
-                    <a class="action" href="callto:+8896254857456"><i class="fas fa-phone-alt"></i>
-                        {{ $footerInfo->phone }}</a>
-                    <a class="action" href="mailto:example@gmail.com"><i class="far fa-envelope"></i>
-                        {{ $footerInfo->email }}</a>
-                    <p><i class="fal fa-map-marker-alt"></i> {{ $footerInfo->address }}</p>
+                    <a class="action" href="callto:{{ @$footerInfo->phone }}"><i
+                            class="fas fa-phone-alt"></i>{{ @$footerInfo->phone }}</a>
+                    <a class="action" href="mailto:{{ @$footerInfo->email }}"><i
+                            class="far fa-envelope"></i>{{ @$footerInfo->email }}</a>
+                    <p><i class="fal fa-map-marker-alt"></i> {{ @$footerInfo->address }}</p>
                     <ul class="ecom__footer_social">
                         @foreach ($footerSocials as $link)
                             <li><a class="behance" href="{{ $link->url }}"><i class="{{ $link->icon }}"></i></a>
@@ -40,8 +39,8 @@
                     <h5>{{ $footerTitle->footer_grid_two_title }}</h5>
                     <ul class="ecom__footer_menu">
                         @foreach ($footerGridTwoLinks as $link)
-                            <li><a href="{{ $link->url }}"><i class="fas fa-caret-right"></i> {{ $link->name }}</a>
-                            </li>
+                            <li><a href="{{ $link->url }}"><i class="fas fa-caret-right"></i>
+                                    {{ $link->name }}</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -80,7 +79,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="ecom__copyright d-flex justify-content-center">
-                        <p>{{ $footerInfo->copyright }}</p>
+                        <p>{{ @$footerInfo->copyright }}</p>
                     </div>
                 </div>
             </div>

@@ -40,7 +40,7 @@
             <div class="col-xl-12">
                 <div class="ecom__section_header">
                     <h3>{{ $category->name }}</h3>
-                    <a class="see_btn" href="#">see more <i class="fas fa-caret-right"></i></a>
+                    <a class="see_btn" href="{{ route('products.index', ['category' => $category->slug]) }}">see more <i class="fas fa-caret-right"></i></a>
                 </div>
             </div>
         </div>
@@ -89,7 +89,7 @@
                                 <span>({{ count($product->reviews) }} review)</span>
                             </p>
                             <a class="ecom__pro_name"
-                                href="{{ route('product-detail', $product->slug) }}">{{ $product->name }}</a>
+                                href="{{ route('product-detail', $product->slug) }}">{{ limitText($product->name, 52) }}</a>
                             @if (checkDiscount($product))
                                 <p class="ecom__price">{{ $settings->currency_icon }}{{ $product->offer_price }}
                                     <del>{{ $settings->currency_icon }}{{ $product->price }}</del>

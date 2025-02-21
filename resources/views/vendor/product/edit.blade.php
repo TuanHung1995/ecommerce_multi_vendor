@@ -2,9 +2,9 @@
 
 @section('content')
     <!--=============================
-                                                        DASHBOARD START
-                                                      ==============================-->
-    <section id="wsus__dashboard">
+                                                            DASHBOARD START
+                                                          ==============================-->
+    <section id="ecom__dashboard">
         <div class="container-fluid">
             @include('vendor.layouts.sidebar')
 
@@ -12,30 +12,30 @@
                 <div class="col-xl-9 col-xxl-10 col-lg-9 ms-auto">
                     <div class="dashboard_content mt-2 mt-md-0">
                         <h3><i class="far fa-user"></i> Products</h3>
-                        <div class="wsus__dashboard_profile">
-                            <div class="wsus__dash_pro_area">
+                        <div class="ecom__dashboard_profile">
+                            <div class="ecom__dash_pro_area">
 
                                 <form action="{{ route('vendor.products.update', $product->id) }}" method="POST"
                                     enctype="multipart/form-data">
                                     @csrf
                                     @method('PUT')
-                                    <div class="form-group wsus__input">
+                                    <div class="form-group ecom__input">
                                         <label>Preview</label>
                                         <br>
                                         <img src="{{ asset($product->thumb_image) }}" style="width:200px" alt="">
                                     </div>
-                                    <div class="form-group wsus__input">
+                                    <div class="form-group ecom__input">
                                         <label for="image">Image</label>
                                         <input type="file" name="image" id="image" class="form-control">
                                     </div>
-                                    <div class="form-group wsus__input">
+                                    <div class="form-group ecom__input">
                                         <label for="name">Name</label>
                                         <input type="text" name="name" id="name" class="form-control"
                                             value="{{ $product->name }}">
                                     </div>
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <div class="form-group wsus__input">
+                                            <div class="form-group ecom__input">
                                                 <label for="inputState">Category</label>
                                                 <select id="inputState" class="form-control main-category" name="category">
                                                     <option value="0">Select</option>
@@ -48,7 +48,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-4">
-                                            <div class="form-group wsus__input">
+                                            <div class="form-group ecom__input">
                                                 <label for="inputState">Sub Category</label>
                                                 <select id="inputState" class="form-control sub-category"
                                                     name="sub_category">
@@ -62,7 +62,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-4">
-                                            <div class="form-group wsus__input">
+                                            <div class="form-group ecom__input">
                                                 <label for="inputState">Child Category</label>
                                                 <select id="inputState" class="form-control child-category"
                                                     name="child_category">
@@ -79,7 +79,7 @@
 
                                     </div>
 
-                                    <div class="form-group wsus__input">
+                                    <div class="form-group ecom__input">
                                         <label for="">Brand</label>
                                         <select name="brand" class="form-control" id="">
                                             <option value="">Select</option>
@@ -90,19 +90,19 @@
                                         </select>
                                     </div>
 
-                                    <div class="form-group wsus__input">
+                                    <div class="form-group ecom__input">
                                         <label for="">SKU</label>
                                         <input type="text" name="sku" id="sku" class="form-control"
                                             value="{{ $product->sku }}">
                                     </div>
 
-                                    <div class="form-group wsus__input">
+                                    <div class="form-group ecom__input">
                                         <label for="">Price</label>
                                         <input type="text" name="price" id="price" class="form-control"
                                             value="{{ $product->price }}">
                                     </div>
 
-                                    <div class="form-group wsus__input">
+                                    <div class="form-group ecom__input">
                                         <label for="">Offer Price</label>
                                         <input type="text" name="offer_price" id="offer_price" class="form-control"
                                             value="{{ $product->offer_price }}">
@@ -110,7 +110,7 @@
 
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <div class="form-group wsus__input">
+                                            <div class="form-group ecom__input">
                                                 <label for="">Offer Start Date</label>
                                                 <input type="text" name="offer_start_date" id="offer_start_date"
                                                     class="form-control datepicker"
@@ -118,7 +118,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="form-group wsus__input">
+                                            <div class="form-group ecom__input">
                                                 <label for="">Offer End Date</label>
                                                 <input type="text" name="offer_end_date" id="offer_end_date"
                                                     class="form-control datepicker" value="{{ $product->offer_end_date }}">
@@ -126,29 +126,29 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group wsus__input">
+                                    <div class="form-group ecom__input">
                                         <label for="">Stock Quantity</label>
                                         <input type="number" min="0" name="qty" id="qty"
                                             class="form-control" value="{{ $product->qty }}">
                                     </div>
 
-                                    <div class="form-group wsus__input">
+                                    <div class="form-group ecom__input">
                                         <label for="">Video Link</label>
                                         <input type="text" name="video_link" id="video_link" class="form-control"
                                             value="{{ $product->video_link }}">
                                     </div>
 
-                                    <div class="form-group wsus__input">
+                                    <div class="form-group ecom__input">
                                         <label for="">Short Description</label>
                                         <textarea name="short_description" id="short_description" class="form-control">{!! $product->short_description !!}</textarea>
                                     </div>
 
-                                    <div class="form-group wsus__input">
+                                    <div class="form-group ecom__input">
                                         <label for="">Long Description</label>
                                         <textarea name="long_description" id="long_description" class="form-control summernote">{!! $product->long_description !!}</textarea>
                                     </div>
 
-                                    <div class="form-group wsus__input">
+                                    <div class="form-group ecom__input">
                                         <label for="">Product Type</label>
                                         <select name="product_type" class="form-control" id="">
                                             <option {{ $product->product_type == '0' ? 'selected' : '' }} value="0">
@@ -164,18 +164,18 @@
                                         </select>
                                     </div>
 
-                                    <div class="form-group wsus__input">
+                                    <div class="form-group ecom__input">
                                         <label for="">Seo Title</label>
                                         <input type="text" name="seo_title" id="seo_title" class="form-control"
                                             value="{{ $product->seo_title }}">
                                     </div>
 
-                                    <div class="form-group wsus__input">
+                                    <div class="form-group ecom__input">
                                         <label for="">Seo Description</label>
                                         <textarea name="seo_description" id="seo_description" class="form-control">{!! $product->seo_description !!}</textarea>
                                     </div>
 
-                                    <div class="form-group wsus__input">
+                                    <div class="form-group ecom__input">
                                         <label for="">Status</label>
                                         <select name="status" class="form-control" id="">
                                             <option {{ $product->status == 1 ? 'selected' : '' }} value="1">Active
@@ -195,8 +195,8 @@
         </div>
     </section>
     <!--=============================
-                                                        DASHBOARD START
-                                                      ==============================-->
+                                                            DASHBOARD START
+                                                          ==============================-->
 @endsection
 
 @push('scripts')

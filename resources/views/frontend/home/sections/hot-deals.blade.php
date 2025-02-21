@@ -105,9 +105,9 @@
                     <div class="col-xl-6 col-lg-6">
                         @if ($homepage_section_banner_three->banner_one->status == 1)
                             <div class="ecom__single_banner_content banner_1">
-                                <a href="{{ $homepage_secion_banner_three->banner_one->banner_url }}">
+                                <a href="{{ $homepage_section_banner_three->banner_one->banner_url }}">
                                     <img class="img-gluid"
-                                        src="{{ asset($homepage_secion_banner_three->banner_one->banner_image) }}"
+                                        src="{{ asset($homepage_section_banner_three->banner_one->banner_image) }}"
                                         alt="">
                                 </a>
                             </div>
