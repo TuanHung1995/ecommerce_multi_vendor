@@ -16,18 +16,22 @@
                                             aria-orientation="vertical">
                                             <h2>Seller List</h2>
                                             <div class="ecom__chatlist_body">
-                                                <button class="nav-link seller" id="seller-list-6" data-bs-toggle="pill"
-                                                    data-bs-target="#v-pills-home" type="button" role="tab"
-                                                    aria-controls="v-pills-home" aria-selected="true">
-                                                    <div class="ecom_chat_list_img">
-                                                        <img src="http://127.0.0.1:8000/uploads/custom-images/robert-james-2022-08-15-01-18-57-7752.png"
-                                                            alt="user" class="img-fluid">
-                                                        <span class="pending d-none" id="pending-6">0</span>
-                                                    </div>
-                                                    <div class="ecom_chat_list_text">
-                                                        <h4>Robert James</h4>
-                                                    </div>
-                                                </button>
+
+                                                @foreach ($chatUsers as $chatUser)
+                                                    <button class="nav-link seller" id="seller-list-6" data-bs-toggle="pill"
+                                                        data-bs-target="#v-pills-home" type="button" role="tab"
+                                                        aria-controls="v-pills-home" aria-selected="true">
+                                                        <div class="ecom_chat_list_img">
+                                                            <img src="{{asset($chatUser->receiverProfile->image)}}"
+                                                                alt="user" class="img-fluid">
+                                                            <span class="pending d-none" id="pending-6">0</span>
+                                                        </div>
+                                                        <div class="ecom_chat_list_text">
+                                                            <h4>{{$chatUser->receiverProfile->name}}</h4>
+                                                        </div>
+                                                    </button>
+                                                @endforeach
+
 
                                             </div>
                                         </div>

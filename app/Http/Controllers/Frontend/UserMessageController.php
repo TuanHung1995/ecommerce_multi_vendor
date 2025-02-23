@@ -10,7 +10,15 @@ use Illuminate\View\View;
 class UserMessageController extends Controller
 {
     function index(): View {
-        return view('frontend.dashboard.messager.index');
+        $userId = auth()->user()->id;
+
+        $chatUsers = Chat::with('receiverProfile')->select(['receiver_id'])
+            ->where('sender_id', $userId)
+            ->where('receiver_id', '!=', $userId)
+            ->groupBy('receiver_id')
+            ->get();
+
+        return view('frontend.dashboard.messager.index', compact('chatUsers'));
     }
 
     function sendMessage(Request $request) {
