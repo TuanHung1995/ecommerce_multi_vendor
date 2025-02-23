@@ -115,6 +115,7 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
     /** Message Route */
     Route::get('messages', [UserMessageController::class, 'index'])->name('messages.index');
     Route::post('send-message', [UserMessageController::class, 'sendMessage'])->name('send-message');
+    Route::get('get-messages', [UserMessageController::class, 'getMessages'])->name('get-messages');
 
     /** User address Routes */
     Route::resource('address', UserAddressController::class);

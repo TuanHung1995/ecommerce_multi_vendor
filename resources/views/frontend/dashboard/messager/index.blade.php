@@ -18,16 +18,17 @@
                                             <div class="ecom__chatlist_body">
 
                                                 @foreach ($chatUsers as $chatUser)
-                                                    <button class="nav-link seller" id="seller-list-6" data-bs-toggle="pill"
-                                                        data-bs-target="#v-pills-home" type="button" role="tab"
-                                                        aria-controls="v-pills-home" aria-selected="true">
+                                                    <button class="nav-link seller chat-user-profile"
+                                                        data-id="{{ $chatUser->receiverProfile->id }}" id="seller-list-6"
+                                                        data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button"
+                                                        role="tab" aria-controls="v-pills-home" aria-selected="true">
                                                         <div class="ecom_chat_list_img">
-                                                            <img src="{{asset($chatUser->receiverProfile->image)}}"
+                                                            <img src="{{ asset($chatUser->receiverProfile->image) }}"
                                                                 alt="user" class="img-fluid">
                                                             <span class="pending d-none" id="pending-6">0</span>
                                                         </div>
                                                         <div class="ecom_chat_list_text">
-                                                            <h4>{{$chatUser->receiverProfile->name}}</h4>
+                                                            <h4>{{ $chatUser->receiverProfile->name }}</h4>
                                                         </div>
                                                     </button>
                                                 @endforeach
@@ -43,82 +44,49 @@
                                             <div class="tab-pane fade show" id="v-pills-home" role="tabpanel"
                                                 aria-labelledby="v-pills-home-tab">
                                                 <div id="chat_box">
-                                                    <div class="ecom__chat_area">
+                                                    <div class="ecom__chat_area"
+                                                        style="position: relative;
+                                            height: 70vh;>
                                                         <div class="ecom__chat_area_header">
-                                                            <h2>Chat with Daniel Paul</h2>
-                                                        </div>
-                                                        <div class="ecom__chat_area_body">
-                                                            <div class="ecom__chat_single">
-                                                                <div class="ecom__chat_single_img">
-                                                                    <img src="http://127.0.0.1:8000/uploads/custom-images/daniel-paul-2022-08-15-01-16-48-4881.png"
-                                                                        alt="user" class="img-fluid">
-                                                                </div>
-                                                                <div class="ecom__chat_single_text">
-                                                                    <p>Welcome to Shop name 2!
-
-                                                                        Lorem Ipsum is simply dummy text of the printing
-                                                                        and typesetting industry. Lorem Ipsum has been
-                                                                        the industry's standard dummy text ever since
-                                                                        the 1500s, when an unknown printer took a galley
-                                                                        of type and scrambled it to make a type specimen
-                                                                        book.</p>
-                                                                    <span>15 August, 2022, 12:56 PM</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="ecom__chat_single single_chat_2">
-                                                                <div class="ecom__chat_single_img">
-                                                                    <img src="http://127.0.0.1:8000/uploads/custom-images/john-doe-2022-08-15-01-14-20-3892.png"
-                                                                        alt="user" class="img-fluid">
-                                                                </div>
-                                                                <div class="ecom__chat_single_text">
-                                                                    <p>Hello Paul</p>
-                                                                    <span>15 August, 2022, 12:57 PM</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="ecom__chat_single single_chat_2">
-                                                                <div class="ecom__chat_single_img">
-                                                                    <img src="http://127.0.0.1:8000/uploads/custom-images/john-doe-2022-08-15-01-14-20-3892.png"
-                                                                        alt="user" class="img-fluid">
-                                                                </div>
-                                                                <div class="ecom__chat_single_text">
-                                                                    <p>I have some queries</p>
-                                                                    <span>15 August, 2022, 12:57 PM</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="ecom__chat_single">
-                                                                <div class="ecom__chat_single_img">
-                                                                    <img src="http://127.0.0.1:8000/uploads/custom-images/daniel-paul-2022-08-15-01-16-48-4881.png"
-                                                                        alt="user" class="img-fluid">
-                                                                </div>
-                                                                <div class="ecom__chat_single_text">
-                                                                    <p>Hi Joe, Thanks for your contact</p>
-                                                                    <span>15 August, 2022, 12:58 PM</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="ecom__chat_single">
-                                                                <div class="ecom__chat_single_img">
-                                                                    <img src="http://127.0.0.1:8000/uploads/custom-images/daniel-paul-2022-08-15-01-16-48-4881.png"
-                                                                        alt="user" class="img-fluid">
-                                                                </div>
-                                                                <div class="ecom__chat_single_text">
-                                                                    <p>Please tell me you query</p>
-                                                                    <span>15 August, 2022, 12:58 PM</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="ecom__chat_area_footer" style="margin-top: 50px;">
-                                                            <form id="customerToSellerMsgForm">
-                                                                <input type="text" placeholder="Type Message"
-                                                                    id="seller_message" autocomplete="off">
-                                                                <input type="hidden" name="seller_id" id="seller_id"
-                                                                    value="5">
-                                                                <button type="submit"><i class="fas fa-paper-plane"
-                                                                        aria-hidden="true"></i></button>
-                                                            </form>
-                                                        </div>
+                                                        <h2>Chat with Daniel Paul</h2>
                                                     </div>
-
+                                                    <div class="ecom__chat_area_body">
+                                                        {{-- <div class="ecom__chat_single single_chat_2">
+                                                            <div class="ecom__chat_single_img">
+                                                                <img src="http://127.0.0.1:8000/uploads/custom-images/john-doe-2022-08-15-01-14-20-3892.png"
+                                                                    alt="user" class="img-fluid">
+                                                            </div>
+                                                            <div class="ecom__chat_single_text">
+                                                                <p>Hello Paul</p>
+                                                                <span>15 August, 2022, 12:57 PM</span>
+                                                            </div>
+                                                        </div> --}}
+                                                        {{-- <div class="ecom__chat_single">
+                                                            <div class="ecom__chat_single_img">
+                                                                <img src="http://127.0.0.1:8000/uploads/custom-images/daniel-paul-2022-08-15-01-16-48-4881.png"
+                                                                    alt="user" class="img-fluid">
+                                                            </div>
+                                                            <div class="ecom__chat_single_text">
+                                                                <p>Please tell me you query</p>
+                                                                <span>15 August, 2022, 12:58 PM</span>
+                                                            </div>
+                                                        </div> --}}
+                                                    </div>
+                                                    <div class="ecom__chat_area_footer"
+                                                        style="
+                                                    width: 100%;
+                                                    bottom: 0">
+                                                        <form id="customerToSellerMsgForm">
+                                                            <input type="text" placeholder="Type Message"
+                                                                id="seller_message" autocomplete="off">
+                                                            <input type="hidden" name="seller_id" id="seller_id"
+                                                                value="5">
+                                                            <button type="submit"><i class="fas fa-paper-plane"
+                                                                    aria-hidden="true"></i></button>
+                                                        </form>
+                                                    </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -131,3 +99,69 @@
         </div>
     </section>
 @endsection
+
+@push('scripts')
+    <script>
+        const = mainChatInbox = $('.ecom__chat_area_body');
+
+        function formatDateTime(dateTimeString) {
+            const options = {
+                year: 'numeric',
+                month: 'short',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit'
+            }
+            const formatedDateTime = new Intl.DateTimeFormat('en-Us', options).format(new Date(dateTimeString));
+            return formatedDateTime;
+        }
+
+        function scrollTobottom() {
+            mainChatInbox.scrollTop(mainChatInbox.prop("scrollHeight"));
+        }
+
+        $(document).ready(function() {
+            $('.chat-user-profile').on('click', function() {
+                let receiverId = $(this).data('id');
+
+                $.ajax({
+                    method: 'GET',
+                    url: "{{ route('user.get-messages') }}",
+                    data: {
+                        receiver_id: receiverId
+                    }
+                    beforeSend: function() {
+
+                    },
+                    success: function(response) {
+
+                        $.each(response, function(index, value) {
+                            let message = `
+                            <div class="ecom__chat_single single_chat_2">
+                                <div class="ecom__chat_single_img">
+                                    <img src="${USER.image}"
+                                                                        alt="user" class="img-fluid">
+                                </div>
+                                <div class="ecom__chat_single_text">
+                                    <p>${value.message}</p>
+                                    <span>${formatDateTime(value.created_at)}</span>
+                                </div>
+                            </div>`
+
+                            mainChatInbox.append(message);
+                        })
+
+                        scrollTobottom();
+                    },
+                    error: function(xhr, status, error) {
+                        console.log(xhr.responseText);
+                    },
+                    complete: function() {
+
+                    }
+
+                })
+            })
+        })
+    </script>
+@endpush
