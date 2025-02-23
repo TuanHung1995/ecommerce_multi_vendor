@@ -13,6 +13,7 @@ use App\Http\Controllers\backend\VendorProductVariantItemController;
 use App\Http\Controllers\Backend\VendorProfileController;
 use App\Http\Controllers\Backend\VendorShopProfileController;
 use App\Http\Controllers\Backend\VendorWithdrawController;
+use App\Http\Controllers\VendorMessageController;
 use Illuminate\Support\Facades\Route;
 
 /** Vendor Routes **/
@@ -22,6 +23,9 @@ Route::put('profile', [VendorProfileController::class, 'updateProfile'])->name('
 Route::post('profile', [VendorProfileController::class, 'updatePassword'])->name('profile.update.password');
 
 Route::resource('shop-profile', VendorShopProfileController::class);
+
+/** Message Route */
+Route::get('messages', [VendorMessageController::class, 'index'])->name('messages.index');
 
 /** Product Route */
 Route::get('product/get-subcategories', [VendorProductController::class, 'getSubCategories'])->name('product.get-subcategories');

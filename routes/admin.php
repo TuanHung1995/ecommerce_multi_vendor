@@ -221,6 +221,7 @@ Route::put('pusher-setting-update', [SettingController::class, 'pusherSettingUpd
 Route::get('payment-settings', [PaymentSettingController::class, 'index'])->name('payment-settings.index');
 Route::resource('paypal-setting', PaypalSettingController::class);
 Route::put('cod-setting/{id}', [CodSettingController::class, 'update'])->name('cod-setting.update');
+Route::put('pusher-setting-update', [SettingController::class, 'pusherSettingUpdate'])->name('pusher-setting-update');
 
 /** Home page Settings */
 Route::get('home-page-setting', [HomePageSettingController::class, 'index'])->name('home-page-setting');

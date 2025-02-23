@@ -16,6 +16,7 @@ use App\Http\Controllers\Frontend\ProductTrackController;
 use App\Http\Controllers\Frontend\ReviewController;
 use App\Http\Controllers\Frontend\UserAddressController;
 use App\Http\Controllers\Frontend\UserDashboardController;
+use App\Http\Controllers\Frontend\UserMessageController;
 use App\Http\Controllers\Frontend\UserOrderController;
 use App\Http\Controllers\Frontend\UserProfileController;
 use App\Http\Controllers\Frontend\UserVendorResquestController;
@@ -106,6 +107,9 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
     Route::get('profile', [UserProfileController::class, 'index'])->name('profile');
     Route::put('profile', [UserProfileController::class, 'updateProfile'])->name('profile.update');
     Route::post('profile', [UserProfileController::class, 'updatePassword'])->name('profile.update.password');
+
+    /** Messager Routes */
+    Route::get('message', [UserMessageController::class, 'index'])->name('messages.index');
 
     /** User address Routes */
     Route::resource('address', UserAddressController::class);
