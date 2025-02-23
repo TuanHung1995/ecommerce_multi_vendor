@@ -5,153 +5,9 @@
 @endsection
 
 @section('content')
-    <!--==========================
-                                                                                                                                                                                                          PRODUCT MODAL VIEW START
-                                                                                                                                                                                                        ===========================-->
-    <section class="product_popup_modal">
-        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
-                                class="far fa-times"></i></button>
-                        <div class="row">
-                            <div class="col-xl-6 col-12 col-sm-10 col-md-8 col-lg-6 m-auto display">
-                                <div class="ecom__quick_view_img">
-                                    <a class="venobox ecom__pro_det_video" data-autoplay="true" data-vbtype="video"
-                                        href="https://youtu.be/7m16dFI1AF8">
-                                        <i class="fas fa-play"></i>
-                                    </a>
-                                    <div class="row modal_slider">
-                                        <div class="col-xl-12">
-                                            <div class="modal_slider_img">
-                                                <img src="" alt="product" class="img-fluid w-100">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="modal_slider_img">
-                                                <img src="" alt="product" class="img-fluid w-100">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="modal_slider_img">
-                                                <img src="" alt="product" class="img-fluid w-100">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="modal_slider_img">
-                                                <img src="" alt="product" class="img-fluid w-100">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-12 col-sm-12 col-md-12 col-lg-6">
-                                <div class="ecom__pro_details_text">
-                                    <a class="title" href="#">Electronics Black Wrist Watch</a>
-                                    <p class="ecom__stock_area"><span class="in_stock">in stock</span> (167 item)</p>
-                                    <h4>$50.00 <del>$60.00</del></h4>
-                                    <p class="review">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                        <span>20 review</span>
-                                    </p>
-                                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                                    <div class="ecom_pro_hot_deals">
-                                        <h5>offer ending time : </h5>
-                                        <div class="simply-countdown simply-countdown-one"></div>
-                                    </div>
-                                    <div class="ecom_pro_det_color">
-                                        <h5>color :</h5>
-                                        <ul>
-                                            <li><a class="blue" href="#"><i class="far fa-check"></i></a></li>
-                                            <li><a class="orange" href="#"><i class="far fa-check"></i></a></li>
-                                            <li><a class="yellow" href="#"><i class="far fa-check"></i></a></li>
-                                            <li><a class="black" href="#"><i class="far fa-check"></i></a></li>
-                                            <li><a class="red" href="#"><i class="far fa-check"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="ecom_pro__det_size">
-                                        <h5>size :</h5>
-                                        <ul>
-                                            <li><a href="#">S</a></li>
-                                            <li><a href="#">M</a></li>
-                                            <li><a href="#">L</a></li>
-                                            <li><a href="#">XL</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="ecom__quentity">
-                                        <h5>quentity :</h5>
-                                        <form class="select_number">
-                                            <input class="number_area" type="text" min="1" max="100"
-                                                value="1" />
-                                        </form>
-                                        <h3>$50.00</h3>
-                                    </div>
-                                    <div class="ecom__selectbox">
-                                        <div class="row">
-                                            <div class="col-xl-6 col-sm-6">
-                                                <h5 class="mb-2">select:</h5>
-                                                <select class="select_2" name="state">
-                                                    <option>default select</option>
-                                                    <option>select 1</option>
-                                                    <option>select 2</option>
-                                                    <option>select 3</option>
-                                                    <option>select 4</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-xl-6 col-sm-6">
-                                                <h5 class="mb-2">select:</h5>
-                                                <select class="select_2" name="state">
-                                                    <option>default select</option>
-                                                    <option>select 1</option>
-                                                    <option>select 2</option>
-                                                    <option>select 3</option>
-                                                    <option>select 4</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <ul class="ecom__button_area">
-                                        <li><a class="add_cart" href="#">add to cart</a></li>
-                                        <li><a class="buy_now" href="#">buy now</a></li>
-                                        <li><a href="#"><i class="fal fa-heart"></i></a></li>
-                                        <li><a href="#"><i class="far fa-random"></i></a></li>
-                                    </ul>
-                                    <p class="brand_model"><span>model :</span> 12345670</p>
-                                    <p class="brand_model"><span>brand :</span> The Northland</p>
-                                    <div class="ecom__pro_det_share">
-                                        <h5>share :</h5>
-                                        <ul class="d-flex">
-                                            <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
-                                            </li>
-                                            <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a class="whatsapp" href="#"><i class="fab fa-whatsapp"></i></a>
-                                            </li>
-                                            <li><a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--==========================
-                                                                                                                                                                                                        PRODUCT MODAL VIEW END
-                                                                                                                                                                                                      ===========================-->
-
-
     <!--============================
-                                                                                                                                                                                                          BREADCRUMB START
-                                                                                                                                                                                                      ==============================-->
+                            BREADCRUMB START
+                        ==============================-->
     <section id="ecom__breadcrumb">
         <div class="ecom_breadcrumb_overlay">
             <div class="container">
@@ -159,8 +15,8 @@
                     <div class="col-12">
                         <h4>products details</h4>
                         <ul>
-                            <li><a href="#">home</a></li>
-                            <li><a href="#">peoduct</a></li>
+                            <li><a href="{{ url('/') }}">home</a></li>
+                            <li><a href="#">product</a></li>
                             <li><a href="#">product details</a></li>
                         </ul>
                     </div>
@@ -169,18 +25,18 @@
         </div>
     </section>
     <!--============================
-                                                                                                                                                                                                          BREADCRUMB END
-                                                                                                                                                                                                      ==============================-->
+                            BREADCRUMB END
+                        ==============================-->
 
 
     <!--============================
-                                                                                                                                                                                                          PRODUCT DETAILS START
-                                                                                                                                                                                                      ==============================-->
+                            PRODUCT DETAILS START
+                        ==============================-->
     <section id="ecom__product_details">
         <div class="container">
             <div class="ecom__details_bg">
                 <div class="row">
-                    <div class="col-xl-4 col-md-5 col-lg-5" id="sticky_pro_zoom_change_css">
+                    <div class="col-xl-4 col-md-5 col-lg-5" style="z-index:999">
                         <div id="sticky_pro_zoom">
                             <div class="exzoom hidden" id="exzoom">
                                 <div class="exzoom_img_box">
@@ -193,9 +49,8 @@
                                     <ul class='exzoom_img_ul'>
                                         <li><img class="zoom ing-fluid w-100" src="{{ asset($product->thumb_image) }}"
                                                 alt="product"></li>
-
-                                        @foreach ($product->productImageGalleries as $image)
-                                            <li><img class="zoom ing-fluid w-100" src="{{ asset($image->image) }}"
+                                        @foreach ($product->productImageGalleries as $productImage)
+                                            <li><img class="zoom ing-fluid w-100" src="{{ asset($productImage->image) }}"
                                                     alt="product"></li>
                                         @endforeach
                                     </ul>
@@ -210,14 +65,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-5 col-md-7 col-lg-7">
+                    <div class="col-xl-7 col-md-7 col-lg-7">
                         <div class="ecom__pro_details_text">
                             <a class="title" href="javascript:;">{{ $product->name }}</a>
                             @if ($product->qty > 0)
                                 <p class="ecom__stock_area"><span class="in_stock">in stock</span> ({{ $product->qty }}
-                                    item)
-                                </p>
-                            @elseif ($product->qty == 0)
+                                    item)</p>
+                            @elseif ($product->qty === 0)
                                 <p class="ecom__stock_area"><span class="in_stock">stock out</span> ({{ $product->qty }}
                                     item)</p>
                             @endif
@@ -228,7 +82,7 @@
                             @else
                                 <h4>{{ $settings->currency_icon }}{{ $product->price }}</h4>
                             @endif
-                            <p class="review">
+                            <p class="ecom__pro_rating">
                                 @php
                                     $avgRating = $product->reviews()->avg('rating');
                                     $fullRating = round($avgRating);
@@ -241,36 +95,31 @@
                                         <i class="far fa-star"></i>
                                     @endif
                                 @endfor
+
                                 <span>({{ count($product->reviews) }} review)</span>
                             </p>
-
                             <p class="description">{!! $product->short_description !!}</p>
 
                             <form class="shopping-cart-form">
                                 <div class="ecom__selectbox">
                                     <div class="row">
-
                                         <input type="hidden" name="product_id" value="{{ $product->id }}">
-
                                         @foreach ($product->variants as $variant)
-                                            @if ($variant->status == 0)
-                                                @continue
+                                            @if ($variant->status != 0)
+                                                <div class="col-xl-6 col-sm-6">
+                                                    <h5 class="mb-2">{{ $variant->name }}: </h5>
+                                                    <select class="select_2" name="variants_items[]">
+                                                        @foreach ($variant->productVariantItems as $variantItem)
+                                                            @if ($variantItem->status != 0)
+                                                                <option value="{{ $variantItem->id }}"
+                                                                    {{ $variantItem->is_default == 1 ? 'selected' : '' }}>
+                                                                    {{ $variantItem->name }} (${{ $variantItem->price }})
+                                                                </option>
+                                                            @endif
+                                                        @endforeach
+                                                    </select>
+                                                </div>
                                             @endif
-
-                                            <div class="col-xl-6 col-sm-6">
-                                                <h5 class="mb-2">{{ $variant->name }}</h5>
-                                                <select class="select_2" name="variants_items[]">
-                                                    @foreach ($variant->productVariantItems as $variantItem)
-                                                        @if ($variantItem->status == 0)
-                                                            @continue
-                                                        @endif
-                                                        <option {{ $variantItem->is_default == 1 ? 'selected' : '' }}
-                                                            value="{{ $variantItem->id }}">{{ $variantItem->name }}
-                                                            (${{ $variantItem->price }})
-                                                        </option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
                                         @endforeach
 
                                     </div>
@@ -287,55 +136,35 @@
 
                                 <ul class="ecom__button_area">
                                     <li><button type="submit" class="add_cart" href="#">add to cart</button></li>
-                                    <li><a class="buy_now" href="#">buy now</a></li>
-                                    <li><a href="#" class="add_to_wishlist" data-id="{{ $product->id }}"><i
+
+
+                                    <li><a style="border: 1px solid gray;
+                                        padding: 7px 11px;
+                                        border-radius: 100%;"
+                                            href="javascript:;" class="add_to_wishlist" data-id="{{ $product->id }}"><i
                                                 class="fal fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="far fa-random"></i></a></li>
+
+                                    <li>
+                                        <button type="button"
+                                            style="border: 1px solid gray;
+                                        padding: 7px 11px;
+                                        margin-left: 7px;
+                                        border-radius: 100%; background-color: #0088cc"
+                                            class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <i class="far fa-comment-alt text-light"></i>
+                                        </button>
+
+                                    </li>
+
+
+
+
                                 </ul>
                             </form>
-
                             <p class="brand_model"><span>brand :</span> {{ $product->brand->name }}</p>
-
-
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-12 mt-md-5 mt-lg-0">
-                        <div class="ecom_pro_det_sidebar" id="sticky_sidebar">
-                            <ul>
-                                <li>
-                                    <span><i class="fal fa-truck"></i></span>
-                                    <div class="text">
-                                        <h4>Return Available</h4>
-                                        <!-- <p>Lorem Ipsum is simply dummy text of the printing</p> -->
-                                    </div>
-                                </li>
-                                <li>
-                                    <span><i class="far fa-shield-check"></i></span>
-                                    <div class="text">
-                                        <h4>Secure Payment</h4>
-                                        <!-- <p>Lorem Ipsum is simply dummy text of the printing</p> -->
-                                    </div>
-                                </li>
-                                <li>
-                                    <span><i class="fal fa-envelope-open-dollar"></i></span>
-                                    <div class="text">
-                                        <h4>Warranty Available</h4>
-                                        <!-- <p>Lorem Ipsum is simply dummy text of the printing</p> -->
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="ecom__det_sidebar_banner">
-                                <img src="" alt="banner" class="img-fluid w-100">
-                                <div class="ecom__det_sidebar_banner_text_overlay">
-                                    <div class="ecom__det_sidebar_banner_text">
-                                        <p>Black Friday Sale</p>
-                                        <h4>Up To 70% Off</h4>
-                                        <a href="#" class="common_btn">shope now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
 
@@ -349,6 +178,7 @@
                                         data-bs-target="#pills-home22" type="button" role="tab"
                                         aria-controls="pills-home" aria-selected="true">Description</button>
                                 </li>
+
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
                                         data-bs-target="#pills-contact" type="button" role="tab"
@@ -359,6 +189,7 @@
                                         data-bs-target="#pills-contact2" type="button" role="tab"
                                         aria-controls="pills-contact2" aria-selected="false">Reviews</button>
                                 </li>
+
                             </ul>
                             <div class="tab-content" id="pills-tabContent4">
                                 <div class="tab-pane fade  show active " id="pills-home22" role="tabpanel"
@@ -369,30 +200,7 @@
                                                 {!! $product->long_description !!}
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-xl-4 col-md-4">
-                                                <div class="description_single">
-                                                    <h6><span>1</span> Free Shipping & Return</h6>
-                                                    <p>We offer free shipping for products on orders above 50$ and
-                                                        offer
-                                                        free delivery for all orders in US.</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-md-4">
-                                                <div class="description_single">
-                                                    <h6><span>2</span> Free and Easy Returns</h6>
-                                                    <p>We guarantee our products and you could get back all of your
-                                                        money anytime you want in 30 days.</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-md-4">
-                                                <div class="description_single">
-                                                    <h6><span>3</span> Special Financing </h6>
-                                                    <p>Get 20%-50% off items over 50$ for a month or over 250$ for a
-                                                        year with our special credit card.</p>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
 
@@ -422,13 +230,14 @@
                                                                 <i class="far fa-star"></i>
                                                             @endif
                                                         @endfor
+
                                                         <span>({{ count($product->reviews) }} review)</span>
                                                     </p>
                                                     <p><span>Store Name:</span> {{ $product->vendor->shop_name }}</p>
                                                     <p><span>Address:</span> {{ $product->vendor->address }}</p>
                                                     <p><span>Phone:</span> {{ $product->vendor->phone }}</p>
                                                     <p><span>mail:</span> {{ $product->vendor->email }}</p>
-                                                    <a href="vendor_details.html" class="see_btn">visit store</a>
+                                                    <a href="#" class="see_btn">visit store</a>
                                                 </div>
                                             </div>
                                             <div class="col-xl-12">
@@ -553,6 +362,7 @@
                                                             </div>
                                                         @endif
                                                     @endauth
+
                                                 </div>
                                             </div>
                                         </div>
@@ -568,176 +378,74 @@
         </div>
     </section>
     <!--============================
-                                                                                                                                                                                                              PRODUCT DETAILS END
-                                                                                                                                                                                                          ==============================-->
+                            PRODUCT DETAILS END
+                        ==============================-->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Send Message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="message_modal">
+                        @csrf
+                        <div class="form-group">
+                            <label for="">Message</label>
+                            <textarea name="message" class="form-control mt-2 message-box"></textarea>
+                            <input type="hidden" name="receiver_id" value="{{ $product->vendor->user_id }}">
+                        </div>
 
+                        <button type="submit" class="btn add_cart mt-4 send-button">Send</button>
 
-    <!--============================
-                                                                                                                                                                                                              RELATED PRODUCT START
-                                                                                                                                                                                                          ==============================-->
-    <section id="ecom__flash_sell">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="ecom__section_header">
-                        <h3>Related Products</h3>
-                        <a class="see_btn" href="#">see more <i class="fas fa-caret-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="row flash_sell_slider">
-                <div class="col-xl-3 col-sm-6 col-lg-4">
-                    <div class="ecom__product_item">
-                        <span class="ecom__new">New</span>
-                        <span class="ecom__minus">-20%</span>
-                        <a class="ecom__pro_link" href="product_details.html">
-                            <img src="" alt="product" class="img-fluid w-100 img_1" />
-                            <img src="" alt="product" class="img-fluid w-100 img_2" />
-                        </a>
-                        <ul class="ecom__single_pro_icon">
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
-                                        class="far fa-eye"></i></a></li>
-                            <li><a href="#"><i class="far fa-heart"></i></a></li>
-                            <li><a href="#"><i class="far fa-random"></i></a>
-                        </ul>
-                        <div class="ecom__product_details">
-                            <a class="ecom__category" href="#">Electronics </a>
-                            <p class="ecom__pro_rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span>(133 review)</span>
-                            </p>
-                            <a class="ecom__pro_name" href="#">hp 24" FHD monitore</a>
-                            <p class="ecom__price">$159 <del>$200</del></p>
-                            <a class="add_cart" href="#">add to cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 col-lg-4">
-                    <div class="ecom__product_item">
-                        <span class="ecom__new">New</span>
-                        <a class="ecom__pro_link" href="product_details.html">
-                            <img src="" alt="product" class="img-fluid w-100 img_1" />
-                            <img src="" alt="product" class="img-fluid w-100 img_2" />
-                        </a>
-                        <ul class="ecom__single_pro_icon">
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
-                                        class="far fa-eye"></i></a></li>
-                            <li><a href="#"><i class="far fa-heart"></i></a></li>
-                            <li><a href="#"><i class="far fa-random"></i></a>
-                        </ul>
-                        <div class="ecom__product_details">
-                            <a class="ecom__category" href="#">fashion </a>
-                            <p class="ecom__pro_rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span>(17 review)</span>
-                            </p>
-                            <a class="ecom__pro_name" href="#">men's casual fashion watch</a>
-                            <p class="ecom__price">$159 <del>$200</del></p>
-                            <a class="add_cart" href="#">add to cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 col-lg-4">
-                    <div class="ecom__product_item">
-                        <span class="ecom__minus">-20%</span>
-                        <a class="ecom__pro_link" href="product_details.html">
-                            <img src="" alt="product" class="img-fluid w-100 img_1" />
-                            <img src="" alt="product" class="img-fluid w-100 img_2" />
-                        </a>
-                        <ul class="ecom__single_pro_icon">
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
-                                        class="far fa-eye"></i></a></li>
-                            <li><a href="#"><i class="far fa-heart"></i></a></li>
-                            <li><a href="#"><i class="far fa-random"></i></a>
-                        </ul>
-                        <div class="ecom__product_details">
-                            <a class="ecom__category" href="#">fashion </a>
-                            <p class="ecom__pro_rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span>(120 review)</span>
-                            </p>
-                            <a class="ecom__pro_name" href="#">men's fashion sholder bag</a>
-                            <p class="ecom__price">$159 <del>$200</del></p>
-                            <a class="add_cart" href="#">add to cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 col-lg-4">
-                    <div class="ecom__product_item">
-                        <span class="ecom__new">New</span>
-                        <span class="ecom__minus">-20%</span>
-                        <a class="ecom__pro_link" href="product_details.html">
-                            <img src="" alt="product" class="img-fluid w-100 img_1" />
-                            <img src="" alt="product" class="img-fluid w-100 img_2" />
-                        </a>
-                        <ul class="ecom__single_pro_icon">
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
-                                        class="far fa-eye"></i></a></li>
-                            <li><a href="#"><i class="far fa-heart"></i></a></li>
-                            <li><a href="#"><i class="far fa-random"></i></a>
-                        </ul>
-                        <div class="ecom__product_details">
-                            <a class="ecom__category" href="#">fashion </a>
-                            <p class="ecom__pro_rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span>(72 review)</span>
-                            </p>
-                            <a class="ecom__pro_name" href="#">men's casual shoes</a>
-                            <p class="ecom__price">$159 <del>$200</del></p>
-                            <a class="add_cart" href="#">add to cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 col-lg-4">
-                    <div class="ecom__product_item">
-                        <span class="ecom__minus">-20%</span>
-                        <a class="ecom__pro_link" href="product_details.html">
-                            <img src="" alt="product" class="img-fluid w-100 img_1" />
-                            <img src="" alt="product" class="img-fluid w-100 img_2" />
-                        </a>
-                        <ul class="ecom__single_pro_icon">
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i
-                                        class="far fa-eye"></i></a></li>
-                            <li><a href="#"><i class="far fa-heart"></i></a></li>
-                            <li><a href="#"><i class="far fa-random"></i></a>
-                        </ul>
-                        <div class="ecom__product_details">
-                            <a class="ecom__category" href="#">fashion </a>
-                            <p class="ecom__pro_rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span>(17 review)</span>
-                            </p>
-                            <a class="ecom__pro_name" href="#">men's casual fashion watch</a>
-                            <p class="ecom__price">$159 <del>$200</del></p>
-                            <a class="add_cart" href="#">add to cart</a>
-                        </div>
-                    </div>
+                    </form>
+
                 </div>
 
             </div>
         </div>
-    </section>
-    <!--============================
-                                                                                                                                                                                                              RELATED PRODUCT END
-                                                                                                                                                                                                          ==============================-->
+    </div>
 @endsection
+
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            $('.message_modal').on('submit', function(e) {
+                e.preventDefault();
+                let formData = $(this).serialize();
+
+                $.ajax({
+                    method: 'POST',
+                    url: '{{ route('user.send-message') }}',
+                    data: formData,
+                    beforeSend: function() {
+                        let html =
+                            `<span class="spinner-border spinner-border-sm text-light" role="status" aria-hidden="true"></span> Sending..`
+
+                        $('.send-button').html(html);
+                        $('.send-button').prop('disabled', true);
+
+
+                    },
+                    success: function(response) {
+                        $('.message-box').val('');
+                        $('.modal-body').append(
+                            `<div class="alert alert-success mt-2"><a href="{{ route('user.messages.index') }}" class="text-primary">Click here</a> for go to messenger.</div>`
+                        )
+                        toastr.success(response.message);
+                    },
+                    error: function(xhr, status, error) {
+                        toastr.error(xhr.responseJSON.message);
+                        $('.send-button').html('Send');
+                        $('.send-button').prop('disabled', false);
+                    },
+                    complete: function() {
+                        $('.send-button').html('Send');
+                        $('.send-button').prop('disabled', false);
+                    }
+                })
+            })
+        })
+    </script>
+@endpush
