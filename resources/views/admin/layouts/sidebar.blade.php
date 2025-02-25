@@ -215,6 +215,10 @@
                 </ul>
             </li>
 
+            <li><a class="nav-link {{ setActive(['admin.messages.index']) }}"
+                href="{{ route('admin.messages.index') }}"><i class="fas fa-user"></i>
+                <span>Messages</span></a></li>
+
             <li
                 class="dropdown {{ setActive([
                     'admin.vendor-requests.*',
