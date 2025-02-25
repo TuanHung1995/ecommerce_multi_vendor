@@ -51,6 +51,8 @@
             image: "{{ asset(auth()->user()->image) }}",
         }
     </script>
+
+    @vite(['resources/js/app.js'])
     <!-- /END GA -->
 </head>
 
