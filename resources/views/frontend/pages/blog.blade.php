@@ -16,7 +16,7 @@
                         <h4>our latest blogs</h4>
                         <ul>
                             <li><a href="{{ url('/') }}">home</a></li>
-                            <li><a href="{{ route('blogs') }}">blogs</a></li>
+                            <li><a href="{{ route('blog') }}">blogs</a></li>
                         </ul>
                     </div>
                 </div>

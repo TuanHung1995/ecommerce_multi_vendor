@@ -32,7 +32,7 @@ class FrontendProductController extends Controller
 
                     return $query->where('price', '>=', $from)->where('price', '<=', $to);
                 })
-                ->paginate(12);
+                ->paginate(5);
         } elseif ($request->has('subcategory')) {
             $subCategory = SubCategory::where('slug', $request->subcategory)->firstOrFail();
             $products = Product::where([
@@ -47,7 +47,7 @@ class FrontendProductController extends Controller
 
                     return $query->where('price', '>=', $from)->where('price', '<=', $to);
                 })
-                ->paginate(12);
+                ->paginate(5);
         } elseif ($request->has('childcategory')) {
             $childCategory = ChildCategory::where('slug', $request->childcategory)->firstOrFail();
             $products = Product::where([
@@ -62,7 +62,7 @@ class FrontendProductController extends Controller
 
                     return $query->where('price', '>=', $from)->where('price', '<=', $to);
                 })
-                ->paginate(12);
+                ->paginate(5);
         } elseif ($request->has('brand')) {
             $brand = Brand::where('slug', $request->brand)->firstOrFail();
             $products = Product::where([
@@ -77,7 +77,7 @@ class FrontendProductController extends Controller
 
                     return $query->where('price', '>=', $from)->where('price', '<=', $to);
                 })
-                ->paginate(12);
+                ->paginate(5);
         } elseif ($request->has('search')) {
             $products = Product::where(['status' => 1, 'is_approved' => 1])
                 ->where(function ($query) use ($request) {
@@ -88,9 +88,9 @@ class FrontendProductController extends Controller
                                 ->orWhere('long_description', 'like', '%' . $request->search . '%');
                         });
                 })
-                ->paginate(12);
+                ->paginate(5);
         } else {
-            $products = Product::where('status', 1)->where('is_approved', 1)->orderBy('id', 'DESC')->paginate(12);
+            $products = Product::where('status', 1)->where('is_approved', 1)->orderBy('id', 'DESC')->paginate(5);
         }
 
         $categories = Category::where('status', 1)->get();

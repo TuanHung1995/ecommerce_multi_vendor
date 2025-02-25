@@ -22,6 +22,7 @@ use App\Http\Controllers\Backend\FooterInfoController;
 use App\Http\Controllers\Backend\FooterSocialController;
 use App\Http\Controllers\Backend\HomePageSettingController;
 use App\Http\Controllers\Backend\ManageUserController;
+use App\Http\Controllers\Backend\MessageController;
 use App\Http\Controllers\Backend\OrderController;
 use App\Http\Controllers\Backend\PaymentSettingController;
 use App\Http\Controllers\Backend\PaypalSettingController;
@@ -197,6 +198,11 @@ Route::get('withdraw', [WithdrawController::class, 'index'])->name('withdraw.ind
 Route::get('withdraw/{id}', [WithdrawController::class, 'show'])->name('withdraw.show');
 Route::put('withdraw/{id}', [WithdrawController::class, 'update'])->name('withdraw.update');
 
+/** Message route */
+Route::get('messages', [MessageController::class, 'index'])->name('messages.index');
+Route::get('get-messages', [MessageController::class, 'getMessages'])->name('get-messages');
+Route::post('send-message', [MessageController::class, 'sendMessage'])->name('send-message');
+
 /** Footer Routes */
 Route::resource('footer-info', FooterInfoController::class);
 Route::put('footer-socials/change-status', [FooterSocialController::class, 'changeStatus'])->name('footer-socials.change-status');
@@ -221,6 +227,7 @@ Route::put('pusher-setting-update', [SettingController::class, 'pusherSettingUpd
 Route::get('payment-settings', [PaymentSettingController::class, 'index'])->name('payment-settings.index');
 Route::resource('paypal-setting', PaypalSettingController::class);
 Route::put('cod-setting/{id}', [CodSettingController::class, 'update'])->name('cod-setting.update');
+Route::put('pusher-setting-update', [SettingController::class, 'pusherSettingUpdate'])->name('pusher-setting-update');
 
 /** Home page Settings */
 Route::get('home-page-setting', [HomePageSettingController::class, 'index'])->name('home-page-setting');

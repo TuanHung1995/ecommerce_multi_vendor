@@ -42,7 +42,7 @@
                                     @endif
                                 </span></a>
                         </li>
-                        <li><a href="compare.html"><i class="fal fa-random"></i><span>03</span></a></li>
+                        {{-- <li><a href="compare.html"><i class="fal fa-random"></i><span>03</span></a></li> --}}
                         <li><a class="ecom__cart_icon" href="#"><i class="fal fa-shopping-bag"></i><span
                                     id="cart-count">{{ Cart::content()->count() }}</span></a></li>
                     </ul>
