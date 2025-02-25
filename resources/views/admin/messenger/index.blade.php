@@ -102,8 +102,8 @@
                 mainChatInbox.attr('data-inbox', receiverId);
                 $('#receiver_id').val(receiverId);
                 $.ajax({
-                    method: 'GET',
-                    url: "{{ route('admin.get-messages') }}",
+                    method: 'get',
+                    url: '{{ route('admin.get-messages') }}',
                     data: {
                         receiver_id: receiverId
                     },

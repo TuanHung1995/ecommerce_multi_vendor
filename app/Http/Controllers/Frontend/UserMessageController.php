@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Events\MessageEvent;
 use App\Http\Controllers\Controller;
 use App\Models\Chat;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Stripe\Treasury\ReceivedCredit;
 
 class UserMessageController extends Controller
 {
-    function index(): View {
+    function index()
+    {
         $userId = auth()->user()->id;
 
         $chatUsers = Chat::with('receiverProfile')->select(['receiver_id'])
@@ -18,10 +21,11 @@ class UserMessageController extends Controller
             ->groupBy('receiver_id')
             ->get();
 
-        return view('frontend.dashboard.messager.index', compact('chatUsers'));
+        return view('frontend.dashboard.messenger.index', compact('chatUsers'));
     }
 
-    function sendMessage(Request $request) {
+    function sendMessage(Request $request)
+    {
         $request->validate([
             'message' => ['required'],
             'receiver_id' => ['required']
@@ -33,10 +37,13 @@ class UserMessageController extends Controller
         $message->message = $request->message;
         $message->save();
 
+        broadcast(new MessageEvent($message->message, $message->receiver_id, $message->created_at));
+
         return response(['status' => 'success', 'message' => 'message sent successfully']);
     }
 
-    function getMessages(Request $request) {
+    function getMessages(Request $request)
+    {
         $senderId = auth()->user()->id;
         $receiverId = $request->receiver_id;
 
